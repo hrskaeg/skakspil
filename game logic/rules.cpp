@@ -1,9 +1,10 @@
 #include "rules.h"
 #include "board.h"
+#include "piece.h"
 
 
 bool Rules::isValidMove(const Board& board, const Move& move){
-    const Piece& piece = board.getpiece(move.from.row, move.from.col);
+    const Piece& piece = board.getPiece(move.from.row, move.from.col);
 
     switch (piece.type)
     {
@@ -18,5 +19,33 @@ bool Rules::isValidMove(const Board& board, const Move& move){
         break;
     }
 }
+
+
+//Dummy definitions of piece rules
+bool Rules::Pawn::isValidMove(const Board& board, const Move& move) {
+    return true;
+}
+
+bool Rules::Rook::isValidMove(const Board& board, const Move& move) {
+    return true;
+}
+
+bool Rules::Knight::isValidMove(const Board& board, const Move& move) {
+    return true;
+}
+
+bool Rules::Bishop::isValidMove(const Board& board, const Move& move) {
+    return true;
+}
+
+bool Rules::Queen::isValidMove(const Board& board, const Move& move) {
+    return true;
+}
+
+bool Rules::King::isValidMove(const Board& board, const Move& move) {
+    return true;
+}
+
+
 
 
