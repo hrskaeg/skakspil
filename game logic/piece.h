@@ -13,3 +13,5 @@ struct Piece {
     Color color;
     bool hasMoved = false; //2 row movement pawns, castling etc.
 };
+
+

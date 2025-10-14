@@ -68,8 +68,6 @@ if (toPiece.color == Color::None) //if empty return false
 }
 
 
-
-
 bool Rules::isValidMove(const Board& board, const Move& move){
     const Piece& piece = board.getPiece(move.from.row, move.from.col);
 
@@ -87,6 +85,26 @@ bool Rules::isValidMove(const Board& board, const Move& move){
     }
 }
 
+//position is position to be checked for threats. byColor is the color that we want to see if threatens square
+bool Rules::isSquareAttacked(const Board& board, const Position& position, const Color& byColor){
+for (int r = 0; r < 8; r++){ //Iterates through all rows
+    for (int c = 0; c < 8; c++){ //combined with iterating through all columns = iterates all squares on board.
+        const Piece& piece = board.getPiece(r,c); //gets piece of current square ite
+        
+        if (piece.type == Piecetype::None ){continue;} //If current square is empty, skip to next iteration
+        if (piece.color != byColor) {continue;} //If current piece is not of color we're checking, skip to next iteration
+        
+        //Simulates current ite' piece, movement to position we're checking. If the move is legal, meaning square is attacked, return true 
+        Move simulateMove{{r,c}, position};
+        if (Rules::isValidMove(board, simulateMove)){
+            return true;
+        }
+    }
+    
+}
 
+return false;
+
+}
 
 

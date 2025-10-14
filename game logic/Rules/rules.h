@@ -10,6 +10,8 @@ namespace Rules {
 
     bool isValidMove(const Board& board, const Move& move);
 
+    bool isSquareAttacked(const Board& board, const Position& position, const Color& byColor);
+
     namespace Pawn {
         enum class MoveType {
             None,

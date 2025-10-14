@@ -16,4 +16,8 @@ public:
     void printBoard()const;
     Color getTurn() const;                      //Returns color of current turn
     const Board& getBoard() const;              //rendering access
+    Position findKing(const Board& board, Color color); 
 };
+
+
+
