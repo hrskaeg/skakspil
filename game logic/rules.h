@@ -4,6 +4,8 @@
 #pragma once
 
 namespace Rules {
+    bool pathIsClear(const Board& board, Position from, Position to);
+    bool isEnemyPiece(const Board& board, Position from, Position to);
 
     bool isValidMove(const Board& board, const Move& move);
 

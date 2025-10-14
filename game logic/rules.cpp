@@ -3,6 +3,35 @@
 #include "piece.h"
 
 
+
+
+bool pathIsClear(const Board& board, Position from, Position to){
+
+
+}
+
+//Checks if given position contains enemy unit.
+bool isEnemyPiece(const Board& board, Position from, Position to){
+Piece fromPiece = board.getPiece(from.row, from.col);
+Piece toPiece = board.getPiece(to.row, to.col);
+
+
+if (toPiece.color == Color::None) //if empty return false
+{
+    return false;
+}else if (toPiece.color != fromPiece.color){ //if not same color, return true
+    return true;
+}else{              //else return false (same color)
+    return false;
+}
+
+
+
+}
+
+
+
+
 bool Rules::isValidMove(const Board& board, const Move& move){
     const Piece& piece = board.getPiece(move.from.row, move.from.col);
 
@@ -27,7 +56,7 @@ bool Rules::Pawn::isValidMove(const Board& board, const Move& move) {
 }
 
 bool Rules::Rook::isValidMove(const Board& board, const Move& move) {
-    return true;
+
 }
 
 bool Rules::Knight::isValidMove(const Board& board, const Move& move) {
