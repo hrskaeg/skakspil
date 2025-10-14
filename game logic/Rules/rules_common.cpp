@@ -39,18 +39,11 @@ int stepCol;
         stepCol = -1;
     }
 //Iterates through each 'step' on the board, and returns false if blocked. Loop stops 1 short of destination square (while statement)
-for (
-    int r = move.from.row + stepRow, c = move.from.col + stepCol;
-    (r != move.to.row) || (c != move.to.col); //while r,c is both not equal to destination square   
-    r += stepRow, c += stepCol
-){
+int r = move.from.row + stepRow, c = move.from.col + stepCol;
+while (r != move.to.row || c != move.to.col) {
     const Piece& piece = board.getPiece(r, c);
-
-    if (piece.type != Piecetype::None)
-    {
-        return false; //Blocked
-    }
-    
+    if (piece.type != Piecetype::None) return false;
+    r += stepRow; c += stepCol;
 }
 return true; //reached destination without any pieces blocking
 }
@@ -82,23 +75,16 @@ bool Rules::isValidMove(const Board& board, const Move& move){
 
     switch (piece.type)
     {
-    case Piecetype::Pawn:   return Rules::Pawn::isValidMove(board, move); break;
-    case Piecetype::Rook:   return Rules::Rook::isValidMove(board, move); break;
-    case Piecetype::Knight: return Rules::Knight::isValidMove(board, move); break;
-    case Piecetype::Bishop: return Rules::Bishop::isValidMove(board, move); break;
-    case Piecetype::Queen:  return Rules::Queen::isValidMove(board, move); break;
-    case Piecetype::King:   return Rules::King::isValidMove(board, move); break;
+    case Piecetype::Pawn:   return Rules::Pawn::isValidMove(board, move);
+    case Piecetype::Rook:   return Rules::Rook::isValidMove(board, move);
+    case Piecetype::Knight: return Rules::Knight::isValidMove(board, move);
+    case Piecetype::Bishop: return Rules::Bishop::isValidMove(board, move);
+    case Piecetype::Queen:  return Rules::Queen::isValidMove(board, move);
+    case Piecetype::King:   return Rules::King::isValidMove(board, move);
     
     default:
-        break;
+        return false;
     }
-}
-
-
-
-
-bool Rules::King::isValidMove(const Board& board, const Move& move) {
-    return true;
 }
 
 

@@ -14,7 +14,7 @@ if (piece.type != Piecetype::King) //safety check that piece is king
 int dRow = move.to.row - move.from.row;
 int dCol = move.to.col - move.from.col;
 
-if (!((abs(dRow) <= 1 || abs(dCol) <= 1) && (dRow != 0 && dCol != 0))) // check if movement length is greater than 1 in either direction
+if (abs(dRow) > 1 || abs(dCol) > 1) // check if movement length is greater than 1 in either direction
 {
     return false;
 }
