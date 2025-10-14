@@ -1,19 +1,65 @@
 #include "rules.h"
 #include "board.h"
 #include "piece.h"
+#include <cmath>
 
 
 
 
-bool pathIsClear(const Board& board, Position from, Position to){
+bool Rules::pathIsClear(const Board& board, const Move& move){
+//compute direction between start and end position (deltaRow, deltaCol)
+int dRow = move.to.row - move.from.row;
+int dCol = move.to.col - move.from.col;
 
+// quick exit for |1| size movements, where no path checks are required.
+if (abs(dRow) <= 1 && abs(dCol) <= 1) {
+        return true;
+    }
 
+//Provide direction for pieces along each axis, with 'steps' for row and col. Direction can never change with piece moves.
+//Checks if dRow is none, negative or positive. If negative, each 'step' is -1, if positivie 1. Same for dCol
+int stepRow;
+    if (dRow == 0) {
+        stepRow = 0;
+    }
+    else if (dRow > 0) {
+        stepRow = 1;
+    }
+    else {
+        stepRow = -1;
+    }
+
+int stepCol;
+    if (dCol == 0) {
+        stepCol = 0;
+    }
+    else if (dCol > 0) {
+        stepCol = 1;
+    }
+    else {
+        stepCol = -1;
+    }
+//Iterates through each 'step' on the board, and returns false if blocked. Loop stops 1 short of destination square (while statement)
+for (
+    int r = move.from.row + stepRow, c = move.from.col + stepCol;
+    (r != move.to.row) || (c != move.to.col); //while r,c is both not equal to destination square   
+    r += stepRow, c += stepCol
+){
+    const Piece& piece = board.getPiece(r, c);
+
+    if (piece.type != Piecetype::None)
+    {
+        return false; //Blocked
+    }
+    
+}
+return true; //reached destination without any pieces blocking
 }
 
 //Checks if given position contains enemy unit.
-bool isEnemyPiece(const Board& board, Position from, Position to){
-Piece fromPiece = board.getPiece(from.row, from.col);
-Piece toPiece = board.getPiece(to.row, to.col);
+bool Rules::isEnemyPiece(const Board& board, const Move& move){
+Piece fromPiece = board.getPiece(move.from.row, move.from.col);
+Piece toPiece = board.getPiece(move.to.row, move.to.col);
 
 
 if (toPiece.color == Color::None) //if empty return false

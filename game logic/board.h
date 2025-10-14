@@ -2,7 +2,7 @@
 
 class Board {
     private:
-        Piece squares[7][7];    //internal board representation
+        Piece squares[8][8];    //internal board representation
     public:
     Board();                                        //Constructor (Sets up a new board)
     void setupDefault();                            //Sets up all pieces to start position
