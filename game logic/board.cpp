@@ -49,9 +49,21 @@ for (int row = 2; row < 6; row++)
 }
 
 const Piece& Board::getPiece(int row, int col) const{
-    
+
 }
 
 void setPiece(int row, int col, Piece piece){}
-void movePiece(int fromRow, int fromCol, int toRow, int toCol){}
+void Board::movePiece(int fromRow, int fromCol, int toRow, int toCol){
+
+    Piece movingPiece = squares[fromRow][fromCol];  //Copy piece to be moved
+
+    squares[toRow][toCol] = movingPiece;            //Paste piece to destination
+
+    squares[toRow][toCol].hasMoved = true;          //Marks piece as having moved
+
+    squares[fromRow][fromCol] = { Piecetype::None, Color::None, false };    //clears previous square of piece
+
+    
+    
+}
 

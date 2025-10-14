@@ -1,5 +1,4 @@
 #include "rules.h"
-#include "board.h"
 #include "piece.h"
 #include <cmath>
 
@@ -96,26 +95,7 @@ bool Rules::isValidMove(const Board& board, const Move& move){
 }
 
 
-//Dummy definitions of piece rules
-bool Rules::Pawn::isValidMove(const Board& board, const Move& move) {
-    return true;
-}
 
-bool Rules::Rook::isValidMove(const Board& board, const Move& move) {
-
-}
-
-bool Rules::Knight::isValidMove(const Board& board, const Move& move) {
-    return true;
-}
-
-bool Rules::Bishop::isValidMove(const Board& board, const Move& move) {
-    return true;
-}
-
-bool Rules::Queen::isValidMove(const Board& board, const Move& move) {
-    return true;
-}
 
 bool Rules::King::isValidMove(const Board& board, const Move& move) {
     return true;

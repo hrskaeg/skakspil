@@ -5,12 +5,19 @@
 
 namespace Rules {
     bool pathIsClear(const Board& board, const Move& move);
-    
+
     bool isEnemyPiece(const Board& board, const Move& move);
 
     bool isValidMove(const Board& board, const Move& move);
 
     namespace Pawn {
+        enum class MoveType {
+            None,
+            ForwardOne,
+            ForwardTwo,
+            DiagonalCapture
+        };
+        MoveType classifyMove(const Piece& piece, int dRow, int dCol);
         bool isValidMove(const Board& board, const Move& move);
     }
 

@@ -11,4 +11,5 @@ enum class Color : uint8_t {
 struct Piece {
     Piecetype type;
     Color color;
+    bool hasMoved = false; //2 row movement pawns, castling etc.
 };
