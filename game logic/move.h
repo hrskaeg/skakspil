@@ -8,3 +8,4 @@ struct Move{
     Piece movedPiece;
     Piece capturedPiece;
 };
+
