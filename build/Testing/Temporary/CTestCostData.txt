@@ -1,0 +1,5 @@
+SkakspilRuns 7 0.0673691
+MoveSequence 4 144.619
+TestMoves 1 0.0987002
+PerftTest 2 6.63631
+---

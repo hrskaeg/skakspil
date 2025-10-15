@@ -62,11 +62,13 @@ CMAKE_BINARY_DIR = "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Sync
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/skakspil_lib.dir/all
 all: CMakeFiles/skakspil.dir/all
 all: tests/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/skakspil_lib.dir/codegen
 codegen: CMakeFiles/skakspil.dir/codegen
 codegen: tests/codegen
 .PHONY : codegen
@@ -76,6 +78,7 @@ preinstall: tests/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/skakspil_lib.dir/clean
 clean: CMakeFiles/skakspil.dir/clean
 clean: tests/clean
 .PHONY : clean
@@ -84,11 +87,13 @@ clean: tests/clean
 # Directory level rules for directory tests
 
 # Recursive "all" directory target.
-tests/all:
+tests/all: tests/CMakeFiles/test_moves.dir/all
+tests/all: tests/CMakeFiles/test_perft.dir/all
 .PHONY : tests/all
 
 # Recursive "codegen" directory target.
-tests/codegen:
+tests/codegen: tests/CMakeFiles/test_moves.dir/codegen
+tests/codegen: tests/CMakeFiles/test_perft.dir/codegen
 .PHONY : tests/codegen
 
 # Recursive "preinstall" directory target.
@@ -96,22 +101,55 @@ tests/preinstall:
 .PHONY : tests/preinstall
 
 # Recursive "clean" directory target.
-tests/clean:
+tests/clean: tests/CMakeFiles/test_moves.dir/clean
+tests/clean: tests/CMakeFiles/test_perft.dir/clean
 .PHONY : tests/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/skakspil_lib.dir
+
+# All Build rule for target.
+CMakeFiles/skakspil_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target skakspil_lib"
+.PHONY : CMakeFiles/skakspil_lib.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/skakspil_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/skakspil_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 0
+.PHONY : CMakeFiles/skakspil_lib.dir/rule
+
+# Convenience name for target.
+skakspil_lib: CMakeFiles/skakspil_lib.dir/rule
+.PHONY : skakspil_lib
+
+# codegen rule for target.
+CMakeFiles/skakspil_lib.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Finished codegen for target skakspil_lib"
+.PHONY : CMakeFiles/skakspil_lib.dir/codegen
+
+# clean rule for target.
+CMakeFiles/skakspil_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/clean
+.PHONY : CMakeFiles/skakspil_lib.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/skakspil.dir
 
 # All Build rule for target.
-CMakeFiles/skakspil.dir/all:
+CMakeFiles/skakspil.dir/all: CMakeFiles/skakspil_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target skakspil"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=1,2 "Built target skakspil"
 .PHONY : CMakeFiles/skakspil.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/skakspil.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 11
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/skakspil.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 0
 .PHONY : CMakeFiles/skakspil.dir/rule
@@ -123,13 +161,77 @@ skakspil: CMakeFiles/skakspil.dir/rule
 # codegen rule for target.
 CMakeFiles/skakspil.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target skakspil"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=1,2 "Finished codegen for target skakspil"
 .PHONY : CMakeFiles/skakspil.dir/codegen
 
 # clean rule for target.
 CMakeFiles/skakspil.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/clean
 .PHONY : CMakeFiles/skakspil.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_moves.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_moves.dir/all: CMakeFiles/skakspil_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=14,15 "Built target test_moves"
+.PHONY : tests/CMakeFiles/test_moves.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_moves.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests/CMakeFiles/test_moves.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 0
+.PHONY : tests/CMakeFiles/test_moves.dir/rule
+
+# Convenience name for target.
+test_moves: tests/CMakeFiles/test_moves.dir/rule
+.PHONY : test_moves
+
+# codegen rule for target.
+tests/CMakeFiles/test_moves.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=14,15 "Finished codegen for target test_moves"
+.PHONY : tests/CMakeFiles/test_moves.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_moves.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/clean
+.PHONY : tests/CMakeFiles/test_moves.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_perft.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_perft.dir/all: CMakeFiles/skakspil_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=16,17 "Built target test_perft"
+.PHONY : tests/CMakeFiles/test_perft.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_perft.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests/CMakeFiles/test_perft.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" 0
+.PHONY : tests/CMakeFiles/test_perft.dir/rule
+
+# Convenience name for target.
+test_perft: tests/CMakeFiles/test_perft.dir/rule
+.PHONY : test_perft
+
+# codegen rule for target.
+tests/CMakeFiles/test_perft.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=16,17 "Finished codegen for target test_perft"
+.PHONY : tests/CMakeFiles/test_perft.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_perft.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/clean
+.PHONY : tests/CMakeFiles/test_perft.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

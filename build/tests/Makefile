@@ -125,6 +125,82 @@ depend:
 	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+tests/CMakeFiles/test_moves.dir/rule:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests/CMakeFiles/test_moves.dir/rule
+.PHONY : tests/CMakeFiles/test_moves.dir/rule
+
+# Convenience name for target.
+test_moves: tests/CMakeFiles/test_moves.dir/rule
+.PHONY : test_moves
+
+# fast build rule for target.
+test_moves/fast:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/build
+.PHONY : test_moves/fast
+
+# Convenience name for target.
+tests/CMakeFiles/test_perft.dir/rule:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests/CMakeFiles/test_perft.dir/rule
+.PHONY : tests/CMakeFiles/test_perft.dir/rule
+
+# Convenience name for target.
+test_perft: tests/CMakeFiles/test_perft.dir/rule
+.PHONY : test_perft
+
+# fast build rule for target.
+test_perft/fast:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/build
+.PHONY : test_perft/fast
+
+test_moves.obj: test_moves.cpp.obj
+.PHONY : test_moves.obj
+
+# target to build an object file
+test_moves.cpp.obj:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/test_moves.cpp.obj
+.PHONY : test_moves.cpp.obj
+
+test_moves.i: test_moves.cpp.i
+.PHONY : test_moves.i
+
+# target to preprocess a source file
+test_moves.cpp.i:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/test_moves.cpp.i
+.PHONY : test_moves.cpp.i
+
+test_moves.s: test_moves.cpp.s
+.PHONY : test_moves.s
+
+# target to generate assembly for a file
+test_moves.cpp.s:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/test_moves.cpp.s
+.PHONY : test_moves.cpp.s
+
+test_perft.obj: test_perft.cpp.obj
+.PHONY : test_perft.obj
+
+# target to build an object file
+test_perft.cpp.obj:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/test_perft.cpp.obj
+.PHONY : test_perft.cpp.obj
+
+test_perft.i: test_perft.cpp.i
+.PHONY : test_perft.i
+
+# target to preprocess a source file
+test_perft.cpp.i:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/test_perft.cpp.i
+.PHONY : test_perft.cpp.i
+
+test_perft.s: test_perft.cpp.s
+.PHONY : test_perft.s
+
+# target to generate assembly for a file
+test_perft.cpp.s:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/test_perft.cpp.s
+.PHONY : test_perft.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -134,6 +210,14 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... test
+	@echo ... test_moves
+	@echo ... test_perft
+	@echo ... test_moves.obj
+	@echo ... test_moves.i
+	@echo ... test_moves.s
+	@echo ... test_perft.obj
+	@echo ... test_perft.i
+	@echo ... test_perft.s
 .PHONY : help
 
 

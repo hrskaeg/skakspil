@@ -1,62 +1,80 @@
 [
 {
   "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\board.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\board.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/board.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/board.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\game.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\game.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/game.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/game.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\rules.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\rules.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/rules.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/rules.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\perft.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\perft.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/perft.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\piece_rules\\rules_pawn.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_pawn.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_pawn.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_pawn.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\piece_rules\\rules_rook.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_rook.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_rook.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_rook.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\piece_rules\\rules_bishop.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_bishop.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_bishop.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_bishop.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\piece_rules\\rules_queen.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_queen.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_queen.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_queen.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\piece_rules\\rules_knight.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_knight.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_knight.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_knight.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\piece_rules\\rules_king.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_king.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_king.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
   "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\main.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\main.cpp\"",
   "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/main.cpp",
   "output": "CMakeFiles/skakspil.dir/src/main.cpp.obj"
 },
 {
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\board.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\board.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/board.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/board.cpp.obj"
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_moves.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\test_moves.dir\\test_moves.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\tests\\test_moves.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/tests/test_moves.cpp",
+  "output": "tests/CMakeFiles/test_moves.dir/test_moves.cpp.obj"
 },
 {
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\game.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\game.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/game.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/game.cpp.obj"
-},
-{
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\rules.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\rules.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/rules.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/rules.cpp.obj"
-},
-{
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\piece_rules\\rules_pawn.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_pawn.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_pawn.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/piece_rules/rules_pawn.cpp.obj"
-},
-{
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\piece_rules\\rules_rook.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_rook.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_rook.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/piece_rules/rules_rook.cpp.obj"
-},
-{
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\piece_rules\\rules_bishop.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_bishop.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_bishop.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/piece_rules/rules_bishop.cpp.obj"
-},
-{
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\piece_rules\\rules_queen.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_queen.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_queen.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/piece_rules/rules_queen.cpp.obj"
-},
-{
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\piece_rules\\rules_knight.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_knight.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_knight.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/piece_rules/rules_knight.cpp.obj"
-},
-{
-  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\piece_rules\\rules_king.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\piece_rules\\rules_king.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/piece_rules/rules_king.cpp",
-  "output": "CMakeFiles/skakspil.dir/src/piece_rules/rules_king.cpp.obj"
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_perft.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\test_perft.dir\\test_perft.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\tests\\test_perft.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/tests/test_perft.cpp",
+  "output": "tests/CMakeFiles/test_perft.dir/test_perft.cpp.obj"
 }
 ]

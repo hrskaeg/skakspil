@@ -126,6 +126,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named skakspil_lib
+
+# Build rule for target.
+skakspil_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 skakspil_lib
+.PHONY : skakspil_lib
+
+# fast build rule for target.
+skakspil_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/build
+.PHONY : skakspil_lib/fast
+
+#=============================================================================
 # Target rules for targets named skakspil
 
 # Build rule for target.
@@ -138,12 +151,38 @@ skakspil/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/build
 .PHONY : skakspil/fast
 
+#=============================================================================
+# Target rules for targets named test_moves
+
+# Build rule for target.
+test_moves: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_moves
+.PHONY : test_moves
+
+# fast build rule for target.
+test_moves/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_moves.dir\build.make tests/CMakeFiles/test_moves.dir/build
+.PHONY : test_moves/fast
+
+#=============================================================================
+# Target rules for targets named test_perft
+
+# Build rule for target.
+test_perft: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_perft
+.PHONY : test_perft
+
+# fast build rule for target.
+test_perft/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/build
+.PHONY : test_perft/fast
+
 src/board.obj: src/board.cpp.obj
 .PHONY : src/board.obj
 
 # target to build an object file
 src/board.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/board.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/board.cpp.obj
 .PHONY : src/board.cpp.obj
 
 src/board.i: src/board.cpp.i
@@ -151,7 +190,7 @@ src/board.i: src/board.cpp.i
 
 # target to preprocess a source file
 src/board.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/board.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/board.cpp.i
 .PHONY : src/board.cpp.i
 
 src/board.s: src/board.cpp.s
@@ -159,7 +198,7 @@ src/board.s: src/board.cpp.s
 
 # target to generate assembly for a file
 src/board.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/board.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/board.cpp.s
 .PHONY : src/board.cpp.s
 
 src/game.obj: src/game.cpp.obj
@@ -167,7 +206,7 @@ src/game.obj: src/game.cpp.obj
 
 # target to build an object file
 src/game.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/game.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/game.cpp.obj
 .PHONY : src/game.cpp.obj
 
 src/game.i: src/game.cpp.i
@@ -175,7 +214,7 @@ src/game.i: src/game.cpp.i
 
 # target to preprocess a source file
 src/game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/game.cpp.i
 .PHONY : src/game.cpp.i
 
 src/game.s: src/game.cpp.s
@@ -183,7 +222,7 @@ src/game.s: src/game.cpp.s
 
 # target to generate assembly for a file
 src/game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -210,12 +249,36 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/perft.obj: src/perft.cpp.obj
+.PHONY : src/perft.obj
+
+# target to build an object file
+src/perft.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj
+.PHONY : src/perft.cpp.obj
+
+src/perft.i: src/perft.cpp.i
+.PHONY : src/perft.i
+
+# target to preprocess a source file
+src/perft.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/perft.cpp.i
+.PHONY : src/perft.cpp.i
+
+src/perft.s: src/perft.cpp.s
+.PHONY : src/perft.s
+
+# target to generate assembly for a file
+src/perft.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/perft.cpp.s
+.PHONY : src/perft.cpp.s
+
 src/piece_rules/rules_bishop.obj: src/piece_rules/rules_bishop.cpp.obj
 .PHONY : src/piece_rules/rules_bishop.obj
 
 # target to build an object file
 src/piece_rules/rules_bishop.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_bishop.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_bishop.cpp.obj
 .PHONY : src/piece_rules/rules_bishop.cpp.obj
 
 src/piece_rules/rules_bishop.i: src/piece_rules/rules_bishop.cpp.i
@@ -223,7 +286,7 @@ src/piece_rules/rules_bishop.i: src/piece_rules/rules_bishop.cpp.i
 
 # target to preprocess a source file
 src/piece_rules/rules_bishop.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_bishop.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_bishop.cpp.i
 .PHONY : src/piece_rules/rules_bishop.cpp.i
 
 src/piece_rules/rules_bishop.s: src/piece_rules/rules_bishop.cpp.s
@@ -231,7 +294,7 @@ src/piece_rules/rules_bishop.s: src/piece_rules/rules_bishop.cpp.s
 
 # target to generate assembly for a file
 src/piece_rules/rules_bishop.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_bishop.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_bishop.cpp.s
 .PHONY : src/piece_rules/rules_bishop.cpp.s
 
 src/piece_rules/rules_king.obj: src/piece_rules/rules_king.cpp.obj
@@ -239,7 +302,7 @@ src/piece_rules/rules_king.obj: src/piece_rules/rules_king.cpp.obj
 
 # target to build an object file
 src/piece_rules/rules_king.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_king.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.obj
 .PHONY : src/piece_rules/rules_king.cpp.obj
 
 src/piece_rules/rules_king.i: src/piece_rules/rules_king.cpp.i
@@ -247,7 +310,7 @@ src/piece_rules/rules_king.i: src/piece_rules/rules_king.cpp.i
 
 # target to preprocess a source file
 src/piece_rules/rules_king.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_king.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.i
 .PHONY : src/piece_rules/rules_king.cpp.i
 
 src/piece_rules/rules_king.s: src/piece_rules/rules_king.cpp.s
@@ -255,7 +318,7 @@ src/piece_rules/rules_king.s: src/piece_rules/rules_king.cpp.s
 
 # target to generate assembly for a file
 src/piece_rules/rules_king.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_king.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.s
 .PHONY : src/piece_rules/rules_king.cpp.s
 
 src/piece_rules/rules_knight.obj: src/piece_rules/rules_knight.cpp.obj
@@ -263,7 +326,7 @@ src/piece_rules/rules_knight.obj: src/piece_rules/rules_knight.cpp.obj
 
 # target to build an object file
 src/piece_rules/rules_knight.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_knight.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_knight.cpp.obj
 .PHONY : src/piece_rules/rules_knight.cpp.obj
 
 src/piece_rules/rules_knight.i: src/piece_rules/rules_knight.cpp.i
@@ -271,7 +334,7 @@ src/piece_rules/rules_knight.i: src/piece_rules/rules_knight.cpp.i
 
 # target to preprocess a source file
 src/piece_rules/rules_knight.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_knight.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_knight.cpp.i
 .PHONY : src/piece_rules/rules_knight.cpp.i
 
 src/piece_rules/rules_knight.s: src/piece_rules/rules_knight.cpp.s
@@ -279,7 +342,7 @@ src/piece_rules/rules_knight.s: src/piece_rules/rules_knight.cpp.s
 
 # target to generate assembly for a file
 src/piece_rules/rules_knight.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_knight.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_knight.cpp.s
 .PHONY : src/piece_rules/rules_knight.cpp.s
 
 src/piece_rules/rules_pawn.obj: src/piece_rules/rules_pawn.cpp.obj
@@ -287,7 +350,7 @@ src/piece_rules/rules_pawn.obj: src/piece_rules/rules_pawn.cpp.obj
 
 # target to build an object file
 src/piece_rules/rules_pawn.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_pawn.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_pawn.cpp.obj
 .PHONY : src/piece_rules/rules_pawn.cpp.obj
 
 src/piece_rules/rules_pawn.i: src/piece_rules/rules_pawn.cpp.i
@@ -295,7 +358,7 @@ src/piece_rules/rules_pawn.i: src/piece_rules/rules_pawn.cpp.i
 
 # target to preprocess a source file
 src/piece_rules/rules_pawn.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_pawn.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_pawn.cpp.i
 .PHONY : src/piece_rules/rules_pawn.cpp.i
 
 src/piece_rules/rules_pawn.s: src/piece_rules/rules_pawn.cpp.s
@@ -303,7 +366,7 @@ src/piece_rules/rules_pawn.s: src/piece_rules/rules_pawn.cpp.s
 
 # target to generate assembly for a file
 src/piece_rules/rules_pawn.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_pawn.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_pawn.cpp.s
 .PHONY : src/piece_rules/rules_pawn.cpp.s
 
 src/piece_rules/rules_queen.obj: src/piece_rules/rules_queen.cpp.obj
@@ -311,7 +374,7 @@ src/piece_rules/rules_queen.obj: src/piece_rules/rules_queen.cpp.obj
 
 # target to build an object file
 src/piece_rules/rules_queen.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_queen.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_queen.cpp.obj
 .PHONY : src/piece_rules/rules_queen.cpp.obj
 
 src/piece_rules/rules_queen.i: src/piece_rules/rules_queen.cpp.i
@@ -319,7 +382,7 @@ src/piece_rules/rules_queen.i: src/piece_rules/rules_queen.cpp.i
 
 # target to preprocess a source file
 src/piece_rules/rules_queen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_queen.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_queen.cpp.i
 .PHONY : src/piece_rules/rules_queen.cpp.i
 
 src/piece_rules/rules_queen.s: src/piece_rules/rules_queen.cpp.s
@@ -327,7 +390,7 @@ src/piece_rules/rules_queen.s: src/piece_rules/rules_queen.cpp.s
 
 # target to generate assembly for a file
 src/piece_rules/rules_queen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_queen.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_queen.cpp.s
 .PHONY : src/piece_rules/rules_queen.cpp.s
 
 src/piece_rules/rules_rook.obj: src/piece_rules/rules_rook.cpp.obj
@@ -335,7 +398,7 @@ src/piece_rules/rules_rook.obj: src/piece_rules/rules_rook.cpp.obj
 
 # target to build an object file
 src/piece_rules/rules_rook.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_rook.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_rook.cpp.obj
 .PHONY : src/piece_rules/rules_rook.cpp.obj
 
 src/piece_rules/rules_rook.i: src/piece_rules/rules_rook.cpp.i
@@ -343,7 +406,7 @@ src/piece_rules/rules_rook.i: src/piece_rules/rules_rook.cpp.i
 
 # target to preprocess a source file
 src/piece_rules/rules_rook.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_rook.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_rook.cpp.i
 .PHONY : src/piece_rules/rules_rook.cpp.i
 
 src/piece_rules/rules_rook.s: src/piece_rules/rules_rook.cpp.s
@@ -351,7 +414,7 @@ src/piece_rules/rules_rook.s: src/piece_rules/rules_rook.cpp.s
 
 # target to generate assembly for a file
 src/piece_rules/rules_rook.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/piece_rules/rules_rook.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_rook.cpp.s
 .PHONY : src/piece_rules/rules_rook.cpp.s
 
 src/rules.obj: src/rules.cpp.obj
@@ -359,7 +422,7 @@ src/rules.obj: src/rules.cpp.obj
 
 # target to build an object file
 src/rules.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/rules.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/rules.cpp.obj
 .PHONY : src/rules.cpp.obj
 
 src/rules.i: src/rules.cpp.i
@@ -367,7 +430,7 @@ src/rules.i: src/rules.cpp.i
 
 # target to preprocess a source file
 src/rules.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/rules.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/rules.cpp.i
 .PHONY : src/rules.cpp.i
 
 src/rules.s: src/rules.cpp.s
@@ -375,7 +438,7 @@ src/rules.s: src/rules.cpp.s
 
 # target to generate assembly for a file
 src/rules.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/rules.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/rules.cpp.s
 .PHONY : src/rules.cpp.s
 
 # Help Target
@@ -388,6 +451,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... skakspil
+	@echo ... skakspil_lib
+	@echo ... test_moves
+	@echo ... test_perft
 	@echo ... src/board.obj
 	@echo ... src/board.i
 	@echo ... src/board.s
@@ -397,6 +463,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/perft.obj
+	@echo ... src/perft.i
+	@echo ... src/perft.s
 	@echo ... src/piece_rules/rules_bishop.obj
 	@echo ... src/piece_rules/rules_bishop.i
 	@echo ... src/piece_rules/rules_bishop.s
