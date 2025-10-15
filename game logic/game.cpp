@@ -3,32 +3,29 @@
 #include <vector>
 #include <iostream>
 
-bool Game::tryMove(const Move& move){
+MoveStatus Game::tryMove(const Move& move){
 const Piece& piece = board.getPiece(move.from.row, move.from.col);
 
 //validates if turn
 if (piece.color != getTurn())
 {
-    std::cout << "Not your turn!" << std::endl;
-    return false;
+    return MoveStatus::NotYourTurn;
 }
 
 //validates if legal
 if (!Rules::isValidMove(board,move))
 {
-    std::cout << "Illegal move!" << std::endl;
-    return false;
+    return MoveStatus::IllegalMove;
 }
 
 //Below block checks kingsafety post move is executed. Can't check own king by moving piece
 Board tempBoard = board;    //temp board to simulate king safety after move is executed.
-tempBoard.movePiece(move.from.row, move.from.col, move.to.row, move.to.col);
+tempBoard.executeMove(move);
 Position kingPos = findKing(tempBoard,getTurn());
 Color enemyColor = (getTurn() == Color::White) ? Color::Black : Color::White; //Finds enemyColor
 if(Rules::isSquareAttacked(tempBoard,kingPos,enemyColor)){   //Checks if kingPos is attacked after move executed
 
-    std::cout << "Move leaves own king in check!" << std::endl;
-    return false;
+    return MoveStatus::IllegalMove;
 }
 
 
@@ -41,10 +38,10 @@ moveHistory.push_back({
 
 });
 //Performs move
-board.movePiece(move.from.row, move.from.col, move.to.row,move.to.col);
+board.executeMove(move);
 switchTurn();
-return true;
-}   
+return MoveStatus::Success;
+}
 
 void Game::switchTurn(){
     currentTurn = (currentTurn == Color::White) ? Color::Black : Color::White;
@@ -124,7 +121,7 @@ std::vector<Move> moves = generateAllMoves(color); //vector called 'moves' with 
 
 for (const Move& m : moves) { //iterates through all moves in vector 'moves'
     Board tempBoard = board;
-    tempBoard.movePiece(m.from.row, m.from.col, m.to.row, m.to.col); //executes current ite on tempboard
+    tempBoard.executeMove(m); //executes current ite on tempboard
 
     Position kingPos = findKing(tempBoard,color);
     Color enemyColor = (color == Color::White) ? Color::Black : Color::White; //finds king, sets enemyColor
@@ -146,7 +143,7 @@ std::vector<Move> moves = generateAllMoves(color); //vector 'moves' with all leg
 
 for (const Move& m : moves) { //iterates through all moves in vector 'moves'
     Board tempBoard = board;
-    tempBoard.movePiece(m.from.row, m.from.col, m.to.row, m.to.col); //executes current ite on tempboard
+    tempBoard.executeMove(m); //executes current ite on tempboard
 
     Position kingPos = findKing(tempBoard,color);
     Color enemyColor = (color == Color::White) ? Color::Black : Color::White; //finds king, sets enemyColor

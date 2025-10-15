@@ -4,6 +4,12 @@
 #include "move.h"
 #include <vector>
 
+enum class MoveStatus {
+    Success,
+    NotYourTurn,
+    IllegalMove
+};
+
 class Game{
 private:
     Board board;
@@ -11,7 +17,7 @@ private:
     std::vector<Move> moveHistory;
 public:
     Game();                                                     //constructor, initialises board and turn
-    bool tryMove(const Move& move);                             //Attempts move, (validates, and applies if legal)
+    MoveStatus tryMove(const Move& move);                             //Attempts move, (validates, and applies if legal)
     void switchTurn();                                          //switches from white to black
     void printBoard()const;
     Color getTurn() const;                                      //Returns color of current turn

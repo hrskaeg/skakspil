@@ -9,5 +9,5 @@ class Board {
     Piece& getPiece(int row, int col);    
     const Piece& getPiece(int row, int col) const;         //Read-only access to a piece on an index
     void setPiece(int row, int col, Piece piece);   //replace or place a piece
-    void movePiece(int fromRow, int fromCol, int toRow, int toCol);     //Move logic (no validation
+    void executeMove(const Move& move);     //Move logic (no validation
 };

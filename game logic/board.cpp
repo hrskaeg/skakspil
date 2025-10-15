@@ -1,5 +1,6 @@
 #include "board.h"
 #include "piece.h"
+#include "move.h"
 
 Board::Board() {
     setupDefault();
@@ -56,20 +57,20 @@ const Piece& Board::getPiece(int row, int col) const{
 }
 
 Piece& Board::getPiece(int row, int col){
-    
+
 }
 
 void Board::setPiece(int row, int col, Piece piece){}
 
-void Board::movePiece(int fromRow, int fromCol, int toRow, int toCol){
+void Board::executeMove(const Move& move){
 
-    Piece movingPiece = squares[fromRow][fromCol];  //Copy piece to be moved
+    Piece movingPiece = squares[move.from.row][move.from.col];  //Copy piece to be moved
 
-    squares[toRow][toCol] = movingPiece;            //Paste piece to destination
+    squares[move.to.row][move.to.col] = movingPiece;            //Paste piece to destination
 
-    squares[toRow][toCol].hasMoved = true;          //Marks piece as having moved
+    squares[move.to.row][move.to.col].hasMoved = true;          //Marks piece as having moved
 
-    squares[fromRow][fromCol] = { Piecetype::None, Color::None, false };    //clears previous square of piece
+    squares[move.from.row][move.from.col] = { Piecetype::None, Color::None, false };    //clears previous square of piece
 
 
     
