@@ -1,0 +1,7 @@
+C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/CMakeFiles/skakspil.dir
+C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/CMakeFiles/test.dir
+C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/CMakeFiles/edit_cache.dir
+C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/CMakeFiles/rebuild_cache.dir
+C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests/CMakeFiles/test.dir
+C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests/CMakeFiles/edit_cache.dir
+C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests/CMakeFiles/rebuild_cache.dir
