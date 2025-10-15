@@ -7,7 +7,8 @@
 enum class MoveStatus {
     Success,
     NotYourTurn,
-    IllegalMove
+    IllegalMove,
+    MovingEmpty
 };
 
 class Game{

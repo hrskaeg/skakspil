@@ -65,7 +65,9 @@ return squares[row][col];
 
 }
 
-void Board::setPiece(int row, int col, Piece piece){}
+void Board::setPiece(int row, int col, Piece piece){
+    squares[row][col] = piece;
+}
 
 //Returns lowercase letter for black, Uppercase for white
 char Board::pieceToChar(const Piece& piece)const{
@@ -119,8 +121,9 @@ void Board::executeMove(const Move& move){
         getPiece(move.to.row,move.to.col).type == Piecetype::None){
 
             //en passant capture -> remove pawn behind target square
-            int capturedRow = (movingPiece.color == Color::White) ? move.to.row - 1 : move.to.row +1;
+            int capturedRow = (movingPiece.color == Color::White) ? move.to.row -1 : move.to.row +1;
             setPiece(capturedRow, move.to.col, Piece::makeEmpty());
+            std::cout <<"en passant! Removing pawn at(" << capturedRow <<", " << move.from.row <<")\n";
         }
 
     squares[move.to.row][move.to.col] = movingPiece;            //Paste piece to destination

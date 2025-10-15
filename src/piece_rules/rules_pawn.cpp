@@ -34,8 +34,6 @@ int dCol = move.to.col - move.from.col;
 
 auto moveType = classifyMove(piece, dRow, dCol);
 
-//missing check for, if currently blocking threat to king
-
 switch (moveType)
 {
     case MoveType::ForwardOne:

@@ -18,6 +18,12 @@ if (!Rules::isValidMove(board,move))
     return MoveStatus::IllegalMove;
 }
 
+//validates if trying to move empty square
+if (piece.type == Piecetype::None)
+    {
+        return MoveStatus::MovingEmpty;
+    }
+
 //Below block checks kingsafety post move is executed. Can't check own king by moving piece
 Board tempBoard = board;    //temp board to simulate king safety after move is executed.
 tempBoard.executeMove(move);

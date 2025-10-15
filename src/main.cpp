@@ -63,10 +63,14 @@ int main(){
         case MoveStatus::NotYourTurn :
             std::cout << "Not your turn! Current turn is: " << ((game.getTurn() == Color::White) ? "White" : "Black") << " to move" << std::endl;
             break;
+        case MoveStatus::MovingEmpty :
+            std::cout << "No piece selected";
+            break;
         case MoveStatus::Success :
             std::cout << input << std::endl;;
             game.getBoard().printBoard();
             break;
+
         default:
             std::cout << "Movestatus error!!";
             break;
