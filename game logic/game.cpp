@@ -28,7 +28,6 @@ if(Rules::isSquareAttacked(tempBoard,kingPos,enemyColor)){   //Checks if kingPos
     return MoveStatus::IllegalMove;
 }
 
-
 //Logs move in history
 moveHistory.push_back({
     move.from,
@@ -39,9 +38,9 @@ moveHistory.push_back({
 });
 //Performs move
 board.executeMove(move);
-if (piece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
-    handleCastling(move);
-}
+//checks for castling
+    if (piece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
+    handleCastling(move);}
 handlePromotion(move);
 switchTurn();
 return MoveStatus::Success;
