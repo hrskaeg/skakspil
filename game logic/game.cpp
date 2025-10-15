@@ -112,7 +112,7 @@ std::vector<Move> Game::generateAllMoves (Color color) const{
 //returns True if color passed is in check
 bool Game::inCheck(const Color& color)const{ 
 Position kingPos = findKing(board,color);
-Color enemyColor = (getTurn() == Color::White) ? Color::Black : Color::White; //Finds enemyColor
+Color enemyColor = (color == Color::White) ? Color::Black : Color::White; //Finds enemyColor
 return Rules::isSquareAttacked(board, kingPos, enemyColor);
 
 }

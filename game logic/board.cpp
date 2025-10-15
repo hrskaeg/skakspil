@@ -109,6 +109,16 @@ std::cout << "      a b c d e f g h\n"; //labels at bottom
 void Board::executeMove(const Move& move){
 
     Piece movingPiece = squares[move.from.row][move.from.col];  //Copy piece to be moved
+        
+        //check for en passant
+    if  (movingPiece.type == Piecetype::Pawn &&
+        abs(move.to.col - move.from.col) == 1 &&
+        getPiece(move.to.row,move.to.col).type == Piecetype::None){
+
+            //en passant capture -> remove pawn behind target square
+            int capturedRow = (movingPiece.color == Color::White) ? move.to.row - 1 : move.to.row +1;
+            setPiece(capturedRow, move.to.col, Piece::makeEmpty());
+        }
 
     squares[move.to.row][move.to.col] = movingPiece;            //Paste piece to destination
 

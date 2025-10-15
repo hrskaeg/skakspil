@@ -17,7 +17,8 @@ namespace Rules {
             None,
             ForwardOne,
             ForwardTwo,
-            DiagonalCapture
+            DiagonalCapture,
+            EnPassant
         };
         MoveType classifyMove(const Piece& piece, int dRow, int dCol);
         bool isValidMove(const Board& board, const Move& move);
