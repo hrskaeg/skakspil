@@ -1,6 +1,6 @@
 SkakspilRuns 21 0.0456743
 MoveSequence 4 144.619
 TestMoves 15 0.0072066
-PerftTest 19 0.00510735
+PerftTest 27 0.404872
 FenTest 14 0.0066543
 ---

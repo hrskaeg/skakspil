@@ -1,13 +1,28 @@
 #include "perft.h"
 #include "game.h"
+#include "fen.h"
 #include <iostream>
 
 
 
 int main() {
-    Game g;
-    std::cout << "==== DEPTH 1 ====\n";
-    Testing::perftDivide(g, 1);
-    std::cout << "\n==== DEPTH 2 ====\n";
-    Testing::perftDivide(g, 2);
+    std::string fen;
+    int depth;
+
+    std::cout << "Enter FEN string: ";
+    std::getline(std::cin, fen);
+
+    std::cout << "Enter perft depth: ";
+    std::cin >> depth;
+
+    Game game;
+    FEN::loadPosition(game, fen);
+
+
+    
+
+    std::cout << "\nFEN: " << fen << std::endl;
+    Testing::perftDivide(game, depth);
+
+    return 0;
 }

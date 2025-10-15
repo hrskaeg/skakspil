@@ -29,14 +29,15 @@ void runPerftSuite(Game& game, int maxDepth) {
 }
 
 void perftDivide(Game& game, int depth) {
-    auto moves = game.generateAllMoves(Color::White);
-for (auto& m : moves) {
-    Game copy = game;
-    copy.getBoard().executeMove(m);
-    auto nodes = Testing::perft(copy, 1);  // one level deeper
-    std::cout << m.toString() << ": " << nodes << "\n";
-}
-
+    auto moves = game.generateAllMoves(game.getTurn());
+    for (const auto& m : moves) {
+        Game next = game;
+        auto res = next.tryMove(m);                     
+        if (res == MoveStatus::Success) {
+            auto nodes = Testing::perft(next, depth - 1);
+            std::cout << m.toString() << ": " << nodes << "\n";
+        }
+    }
 }
 
 } // namespace Testing

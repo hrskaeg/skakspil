@@ -64,6 +64,7 @@ game.setTurn(turnPart == "w" ? Color::White : Color::Black);
     } else {
         game.getBoard().setEnPassantTarget({-1, -1}); // no square
     }
+game.getBoard().printBoard();
 
     // (halfmove and fullmove are ignored for now)
 }

@@ -95,8 +95,6 @@ Color Game::getTurn() const{return currentTurn;}            //Returns color of c
 //returns vector with all possible moves for color provided
 std::vector<Move> Game::generateAllMoves (Color color) const{
     std::vector<Move> moves;
-        //Clear stale EP square before generating new moves
-    const_cast<Board&>(board).clearEnPassantTarget();
     for (int r = 0; r < 8; r++){ //Iterates through all rows
         for (int c = 0; c < 8; c++){ //combined with iterating through all columns = iterates all squares on board.
             const Piece& piece = board.getPiece(r,c);

@@ -134,18 +134,13 @@ void Board::executeMove(const Move& move){
 
     squares[move.from.row][move.from.col] = { Piecetype::None, Color::None, false };    //clears previous square of piece
 
-     Position newEPTarget = {-1, -1}; //set new En passant target if pawn moved 2
     if (movingPiece.type == Piecetype::Pawn && abs(move.to.row - move.from.row) == 2) {
         int midRow = (move.to.row + move.from.row) / 2;
-        newEPTarget = { midRow, move.from.col };
-    }
+        setEnPassantTarget({ midRow, move.from.col });
+    }else{
+        setEnPassantTarget({-1,-1});
 
-    clearEnPassantTarget();
-    if (newEPTarget.row != -1) {
-        setEnPassantTarget(newEPTarget);
     }
-
-   
-}
+    }
 
 

@@ -1,222 +1,13 @@
-Start testing: Oct 15 21:40 Romance Summer Time
+Start testing: Oct 15 22:27 Romance Summer Time
 ----------------------------------------------------------
-1/4 Testing: TestMoves
-1/4 Test: TestMoves
-Command: "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests/test_moves.exe"
-Directory: C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests
-"TestMoves" start time: Oct 15 21:40 Romance Summer Time
-Output:
-----------------------------------------------------------
-Running basic chess tests...
-✅ All tests passed!
-<end of output>
-Test time =   0.11 sec
-----------------------------------------------------------
-Test Passed.
-"TestMoves" end time: Oct 15 21:40 Romance Summer Time
-"TestMoves" time elapsed: 00:00:00
-----------------------------------------------------------
-
-2/4 Testing: SkakspilRuns
-2/4 Test: SkakspilRuns
-Command: "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe" "-NoProfile" "-ExecutionPolicy" "Bypass" "-Command" "echo 'exit' | & 'C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/skakspil.exe'"
-Directory: C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build
-"SkakspilRuns" start time: Oct 15 21:40 Romance Summer Time
-Output:
-----------------------------------------------------------
-Welcome to Skakspil (CLI Chess)
----------------------------------
-Type moves in coordinate form (e.g., e2e4)
-Type 'quit' or 'exit' to end the game.
-
-Type 'show' to view board.
-
-8 | r n b q k b n r 
-7 | p p p p p p p p 
-6 | . . . . . . . . 
-5 | . . . . . . . . 
-4 | . . . . . . . . 
-3 | . . . . . . . . 
-2 | P P P P P P P P 
-1 | R N B Q K B N R 
-    ---------------
-    a b c d e f g h
-White to move:exitting game...
-game ended
-<end of output>
-Test time =   0.96 sec
-----------------------------------------------------------
-Test Passed.
-"SkakspilRuns" end time: Oct 15 21:40 Romance Summer Time
-"SkakspilRuns" time elapsed: 00:00:00
-----------------------------------------------------------
-
 3/4 Testing: PerftTest
 3/4 Test: PerftTest
 Command: "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests/test_perft.exe"
 Directory: C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests
-"PerftTest" start time: Oct 15 21:40 Romance Summer Time
+"PerftTest" start time: Oct 15 22:27 Romance Summer Time
 Output:
 ----------------------------------------------------------
-==== DEPTH 1 ====
-b1a3: 20
-b1c3: 22
-g1f3: 22
-g1h3: 20
-a2a3: 19
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-a2a4: 22
-b2b3: 21
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-b2b4: 23
-c2c3: 21
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-c2c4: 24
-d2d3: 27
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-d2d4: 30
-e2e3: 30
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-e2e4: 32
-f2f3: 19
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-f2f4: 22
-g2g3: 21
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-g2g4: 23
-h2h3: 19
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-h2h4: 22
-
-==== DEPTH 2 ====
-b1a3: 20
-b1c3: 22
-g1f3: 22
-g1h3: 20
-a2a3: 19
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-a2a4: 22
-b2b3: 21
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-b2b4: 23
-c2c3: 21
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-c2c4: 24
-d2d3: 27
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-d2d4: 30
-e2e3: 30
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-e2e4: 32
-f2f3: 19
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-f2f4: 22
-g2g3: 21
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-g2g4: 23
-h2h3: 19
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-en passant! Removing pawn at(1, 1)
-h2h4: 22
-<end of output>
-Test time =   0.10 sec
-----------------------------------------------------------
-Test Passed.
-"PerftTest" end time: Oct 15 21:40 Romance Summer Time
-"PerftTest" time elapsed: 00:00:00
-----------------------------------------------------------
-
-4/4 Testing: FenTest
-4/4 Test: FenTest
-Command: "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests/fen_test.exe"
-Directory: C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests
-"FenTest" start time: Oct 15 21:40 Romance Summer Time
-Output:
-----------------------------------------------------------
-=== FEN Loader Test ===
-Loaded starting position:
-
-8 | r n b q k b n r 
-7 | p p p p p p p p 
-6 | . . . . . . . . 
-5 | . . . . . . . . 
-4 | . . . . . . . . 
-3 | . . . . . . . . 
-2 | P P P P P P P P 
-1 | R N B Q K B N R 
-    ---------------
-    a b c d e f g h
-Perft(2) = 400
-
-Loaded Kiwipete test position:
-
+Enter FEN string: Enter perft depth: 
 8 | r . . . k . . r 
 7 | p . p p q p b . 
 6 | b n . . p n p . 
@@ -227,18 +18,65 @@ Loaded Kiwipete test position:
 1 | R . . . K . . R 
     ---------------
     a b c d e f g h
-en passant! Removing pawn at(3, 3)
-en passant! Removing pawn at(3, 3)
-en passant! Removing pawn at(3, 3)
-Perft(2) = 2082
 
-=== FEN Loader Test Completed ===
+FEN: r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 
+a1b1: 44
+a1c1: 44
+a1d1: 44
+e1c1: 44
+e1d1: 44
+e1f1: 44
+e1g1: 44
+h1f1: 44
+h1g1: 44
+a2a3: 45
+en passant! Removing pawn at(3, 0)
+en passant! Removing pawn at(3, 0)
+en passant! Removing pawn at(3, 0)
+a2a4: 45
+b2b3: 43
+d2c1: 44
+d2e3: 44
+d2f4: 44
+d2g5: 42
+d2h6: 42
+e2d1: 45
+e2f1: 45
+e2d3: 43
+e2c4: 42
+e2b5: 40
+e2a6: 37
+g2g3: 43
+g2h3: 44
+g2g4: 42
+c3b1: 43
+c3d1: 43
+c3a4: 43
+c3b5: 40
+f3d3: 43
+f3e3: 44
+f3g3: 44
+f3h3: 44
+f3f4: 44
+f3g4: 43
+f3f5: 46
+f3h5: 44
+f3f6: 40
+d5d6: 42
+d5e6: 47
+e5d3: 44
+e5c4: 43
+e5g4: 44
+e5c6: 42
+e5g6: 42
+e5d7: 46
+e5f7: 45
 <end of output>
-Test time =   0.09 sec
+Test time =  10.93 sec
 ----------------------------------------------------------
 Test Passed.
-"FenTest" end time: Oct 15 21:40 Romance Summer Time
-"FenTest" time elapsed: 00:00:00
+"PerftTest" end time: Oct 15 22:27 Romance Summer Time
+"PerftTest" time elapsed: 00:00:10
 ----------------------------------------------------------
 
-End testing: Oct 15 21:40 Romance Summer Time
+End testing: Oct 15 22:27 Romance Summer Time
