@@ -19,7 +19,6 @@ public:
     Game();                                                     //constructor, initialises board and turn
     MoveStatus tryMove(const Move& move);                             //Attempts move, (validates, and applies if legal)
     void switchTurn();                                          //switches from white to black
-    void printBoard()const;
     Color getTurn() const;                                      //Returns color of current turn
     const Board& getBoard() const;                              //rendering access
     std::vector<Move> generateAllMoves (Color color) const;     //outputs vector with all possible moves
@@ -29,7 +28,6 @@ public:
     bool inCheckmate(Color color) const;                        //Checks if king is in checkmate
     void handlePromotion(const Move& move);
     void handleCastling(const Move& move);
-    void validateMove(const Move& move);
     void executeMove(const Move& move);
     void postMoveChecks(const Move& move);
 

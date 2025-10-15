@@ -1,6 +1,8 @@
 #include "board.h"
 #include "piece.h"
 #include "move.h"
+#include <cctype>
+#include <iostream>
 
 Board::Board() {
     setupDefault();
@@ -47,6 +49,7 @@ for (int row = 2; row < 6; row++)
     {
         squares[row][col] = {Piecetype::None, Color::None};
     }
+
 }
 
 
@@ -61,6 +64,47 @@ Piece& Board::getPiece(int row, int col){
 }
 
 void Board::setPiece(int row, int col, Piece piece){}
+
+//Returns lowercase letter for black, Uppercase for white
+char Board::pieceToChar(const Piece& piece)const{
+    char symbol;
+    switch (piece.type)
+    {
+    case Piecetype::None : return ' ';
+    case Piecetype::King :   symbol = 'K'; break;
+    case Piecetype::Queen :  symbol = 'Q'; break;
+    case Piecetype::Rook :   symbol = 'R'; break;
+    case Piecetype::Bishop : symbol = 'B'; break;
+    case Piecetype::Knight : symbol = 'N'; break;
+    case Piecetype::Pawn :   symbol = 'P'; break;
+    default: return '?'; //Error output
+    }
+if(piece.color == Color::Black){
+    symbol = std::tolower(symbol);
+    }
+return symbol;
+
+}
+
+void Board::printBoard()const{
+std::cout << std::endl;
+
+for (int r = 7; r >= 0; r--)
+{
+    std::cout << (r + 1) << " | ";
+    for (int c = 0; c < 8; c++)
+    {
+        const Piece& piece = getPiece(r,c); //sets piecetype for current ite
+        char symbol = pieceToChar(piece); //gets symbol for current piecetype
+        std::cout << symbol << " ";
+
+    }
+    std::cout << std::endl;
+}
+std::cout << "      a b c d e f g h\n"; //labels at bottom
+}
+
+
 
 void Board::executeMove(const Move& move){
 

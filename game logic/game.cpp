@@ -43,19 +43,18 @@ switchTurn();
 return MoveStatus::Success;
 }
 
+
+
 void Game::switchTurn(){
     currentTurn = (currentTurn == Color::White) ? Color::Black : Color::White;
 
     std::cout << "Turn switched. " << ((currentTurn == Color::White) ? "White" : "Black") << " to move" << std::endl;
 }                          
 
-void printBoard(){
 
-}
                  
-const Board& Game::getBoard()const{
+const Board& Game::getBoard()const{ return board;} //returns current board when called
 
-}
 
 Position Game::findKing(const Board& board, Color color) const{
 for (int r = 0; r < 8; r++){ //Iterates through all rows
@@ -71,17 +70,7 @@ for (int r = 0; r < 8; r++){ //Iterates through all rows
 return {-1,-1};
 }
 
-Color Game::getTurn() const{            //Returns color of current turn
-const Move& lastmove = moveHistory.back();  //readonly of moveHistory vector, saves latest entry in lastmove
-    if (lastmove.movedPiece.color == Color::White){     //checks latest entry for movedpiece.color
-        return Color::Black;
-    }
-    else if (lastmove.movedPiece.color == Color::Black){
-        return Color::White;
-    }
-    else
-    return Color::White;
-}
+Color Game::getTurn() const{return currentTurn;}            //Returns color of current turn
 
 
 //returns vector with all possible moves for color provided
@@ -166,6 +155,23 @@ if (p.type == Piecetype::Pawn){
             std::cout << "Pawn promoted to Queen!" << std::endl;
         }
 }
+
+
+}
+
+void Game::handleCastling(const Move& move){
+int row = move.from.row;
+bool kingSide = (move.to.col > move.from.col); //The king on col 4 is castling kingside (short castles), if the rook square is less than king square. If rook square larger, its queenside castles(long)
+
+//find rook's starting and ending position
+int rookFrom = kingSide ? 7 : 0;
+int rookTo = kingSide ? 5 : 3;    
+
+//moves rook
+Piece rook = board.getPiece(row, rookFrom);
+rook.hasMoved = true;
+board.setPiece(row, rookTo, rook);
+board.setPiece(row, rookFrom, Piece::makeEmpty());
 
 
 }
