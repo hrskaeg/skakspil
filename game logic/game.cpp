@@ -22,7 +22,7 @@ if (!Rules::isValidMove(board,move))
 Board tempBoard = board;    //temp board to simulate king safety after move is executed.
 tempBoard.executeMove(move);
 Position kingPos = findKing(tempBoard,getTurn());
-Color enemyColor = (getTurn() == Color::White) ? Color::Black : Color::White; //Finds enemyColor
+Color enemyColor = (piece.color == Color::White) ? Color::Black : Color::White; //Finds enemyColor
 if(Rules::isSquareAttacked(tempBoard,kingPos,enemyColor)){   //Checks if kingPos is attacked after move executed
 
     return MoveStatus::IllegalMove;
@@ -42,6 +42,7 @@ board.executeMove(move);
 if (piece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
     handleCastling(move);
 }
+handlePromotion(move);
 switchTurn();
 return MoveStatus::Success;
 }
@@ -88,8 +89,19 @@ std::vector<Move> Game::generateAllMoves (Color color) const{
             for (int tr = 0; tr < 8; tr++){ //Iterates through all rows
                 for (int tc = 0; tc < 8; tc++){ //combined with iterating through all columns = iterates all squares on board.
                     Move m{{r,c}, {tr,tc}}; //saves moveset as m
-                    if (Rules::isValidMove(board,m))
-                    moves.push_back(m); //saves move in vector
+                    if (Rules::isValidMove(board,m)){
+                        Board tempBoard = board;
+                        tempBoard.executeMove(m);
+
+                        //check kingsafety postmove
+                        Position kingPos = findKing(tempBoard, color);
+                        Color enemyColor = (color == Color::White) ? Color::Black : Color::White;
+
+                        //only add move if king is safe after move
+                        if (!Rules::isSquareAttacked(tempBoard, kingPos, enemyColor)){
+                            moves.push_back(m);
+                        }
+                    }
                 }
             }
         }
@@ -153,7 +165,7 @@ void Game::handlePromotion(const Move& move){
 Piece& p = board.getPiece(move.to.row,move.to.col);
 if (p.type == Piecetype::Pawn){
     if((p.color == Color::White && move.to.row == 7) ||
-        p.color == Color::Black && move.to.row == 0){
+        (p.color == Color::Black && move.to.row == 0)){
             p.type = Piecetype::Queen;
             std::cout << "Pawn promoted to Queen!" << std::endl;
         }
@@ -175,6 +187,7 @@ Piece rook = board.getPiece(row, rookFrom);
 rook.hasMoved = true;
 board.setPiece(row, rookTo, rook);
 board.setPiece(row, rookFrom, Piece::makeEmpty());
+std::cout << (kingSide ? "Kingside" : "Queenside") << " Castling executed!" << std::endl;
 
 
 }
