@@ -48,9 +48,15 @@ for (int row = 2; row < 6; row++)
     }
 }
 
+
+
 const Piece& Board::getPiece(int row, int col) const{
  
 
+}
+
+Piece& Board::getPiece(int row, int col){
+    
 }
 
 void Board::setPiece(int row, int col, Piece piece){}

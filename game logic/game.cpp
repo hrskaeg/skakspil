@@ -158,3 +158,17 @@ for (const Move& m : moves) { //iterates through all moves in vector 'moves'
 }
 return true;//No legal moves to avoid checkmate
 }
+
+//When called, swaps the pawn on the backrank to a queen
+void Game::handlePromotion(const Move& move){
+Piece& p = board.getPiece(move.to.row,move.to.col);
+if (p.type == Piecetype::Pawn){
+    if((p.color == Color::White && move.to.row == 7) ||
+        p.color == Color::Black && move.to.row == 0){
+            p.type = Piecetype::Queen;
+            std::cout << "Pawn promoted to Queen!" << std::endl;
+        }
+}
+
+
+}

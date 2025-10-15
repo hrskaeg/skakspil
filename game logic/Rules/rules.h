@@ -40,6 +40,7 @@ namespace Rules {
     }
 
     namespace King {
+        bool canCastle(const Board& board, const Move& move);
         bool isValidMove(const Board& board, const Move& move);
     }
 }

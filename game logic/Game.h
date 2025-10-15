@@ -21,6 +21,7 @@ public:
     bool inCheck(const Color& color) const;                     //Checks if king is threatened
     bool inStalemate(Color color) const;                        //Checks if king is in stalemate
     bool inCheckmate(Color color) const;                        //Checks if king is in checkmate
+    void handlePromotion(const Move& move);
     
 };
 
