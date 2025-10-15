@@ -1,4 +1,6 @@
+#pragma once
 #include "piece.h"
+#include "move.h"
 
 class Board {
     private:

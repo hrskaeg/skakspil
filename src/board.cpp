@@ -1,6 +1,6 @@
-#include "board.h"
-#include "piece.h"
-#include "move.h"
+#include "include/board.h"
+#include "include/piece.h"
+#include "include/move.h"
 #include <cctype>
 #include <iostream>
 
@@ -55,11 +55,13 @@ for (int row = 2; row < 6; row++)
 
 
 const Piece& Board::getPiece(int row, int col) const{
- 
+return squares[row][col];
+
 
 }
 
 Piece& Board::getPiece(int row, int col){
+return squares[row][col];
 
 }
 
@@ -101,7 +103,8 @@ for (int r = 7; r >= 0; r--)
     }
     std::cout << std::endl;
 }
-std::cout << "      a b c d e f g h\n"; //labels at bottom
+std::cout << "    ---------------\n";
+std::cout << "    a b c d e f g h\n"; //labels at bottom
 }
 
 

@@ -1,5 +1,5 @@
-#include "rules.h"
-#include "piece.h"
+#include "include/rules.h"
+#include "include/piece.h"
 #include <cmath>
 
 

@@ -1,7 +1,8 @@
+#pragma once
 #include "board.h"
 #include "piece.h"
 #include "move.h"
-#pragma once
+
 
 namespace Rules {
     bool pathIsClear(const Board& board, const Move& move);

@@ -1,5 +1,5 @@
-#include "game.h"
-#include "rules.h"
+#include "include/game.h"
+#include "include/rules.h"
 #include <vector>
 #include <iostream>
 
@@ -46,8 +46,12 @@ switchTurn();
 return MoveStatus::Success;
 }
 
-
-
+Game::Game()
+    : board(), currentTurn(Color::White)
+{
+    //initializes starting position
+    board.setupDefault();
+}
 void Game::switchTurn(){
     currentTurn = (currentTurn == Color::White) ? Color::Black : Color::White;
 
