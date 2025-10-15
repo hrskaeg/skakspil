@@ -39,6 +39,9 @@ moveHistory.push_back({
 });
 //Performs move
 board.executeMove(move);
+if (piece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
+    handleCastling(move);
+}
 switchTurn();
 return MoveStatus::Success;
 }
