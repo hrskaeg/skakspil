@@ -33,7 +33,7 @@ return  Rules::isEnemyPiece(board,move) ||
 
 
 
-
+//returns true if castling is valid.
 bool Rules::King::canCastle(const Board& board, const Move& move){
 const Piece& king = board.getPiece(move.from.row,move.from.col);
 Color color = king.color;
@@ -49,7 +49,7 @@ if (rook.type !=Piecetype::Rook || rook.color !=color || rook.hasMoved !=false )
     return false;
     }
 
-if(!Rules::pathIsClear(board, {move.from, {row, rookCol}})){    //Third condition. Is the path clear between king and rook?
+if (!Rules::pathIsClear(board, {{move.from.row, move.from.col}, {row, rookCol - direction}})){    //Third condition. Is the path clear between king and rook?
     return false;
     }
 
@@ -57,7 +57,7 @@ if (Rules::isSquareAttacked(board, {move.from.row, move.from.col}, (color == Col
     return false;
     }
 
-for (int step = 0; step <=2; ++step){
+for (int step = 1; step <=2; ++step){
     Position testPos{row, move.from.col + direction*step};
     if (Rules::isSquareAttacked(board, testPos,(color == Color::White ? Color::Black : Color::White))){ //fifth confition. Is squares between rook and king threatened?
         return false;
