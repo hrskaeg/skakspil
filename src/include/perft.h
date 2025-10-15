@@ -8,4 +8,6 @@ namespace Testing {
 
     //Helper to print per-depth results
     void runPerftSuite(Game& game, int maxDepth);
+
+    void perftDivide(Game& game, int depth); //debugging
 }

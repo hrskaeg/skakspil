@@ -34,23 +34,16 @@ int dCol = move.to.col - move.from.col;
 
 auto moveType = classifyMove(piece, dRow, dCol);
 
+
 switch (moveType)
 {
     case MoveType::ForwardOne:
         return targetsquare.type == Piecetype::None; //gets destinationsquare, and checks for empty. returns true if true
     
     case MoveType::ForwardTwo: {
-        bool valid = !piece.hasMoved &&
-                 Rules::pathIsClear(board, move) &&
-                 targetsquare.type == Piecetype::None; //checks if pawn has moved AND if path is clear AND if destination square is empty
-        if (valid){
-            //mark en passant target square halfway between start and end
-            const_cast<Board&>(board).setEnPassantTarget({
-                (move.from.row + move.to.row) / 2, move.from.col
-            });
-        }else{const_cast<Board&>(board).clearEnPassantTarget();
-        }
-    return valid;
+        return  !piece.hasMoved &&
+                Rules::pathIsClear(board, move) &&
+                targetsquare.type == Piecetype::None; //checks if pawn has moved AND if path is clear AND if destination square is empty
     }
         
     

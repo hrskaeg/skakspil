@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "skakspil.exe"
+			"path" : "tests/fen_test.exe"
 		},
 		{
-			"path" : "skakspil.pdb"
+			"path" : "tests/fen_test.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -14,11 +14,12 @@
 		"commands" : 
 		[
 			"add_executable",
-			"target_link_libraries"
+			"target_link_libraries",
+			"target_include_directories"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"tests/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -28,13 +29,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 25,
+				"line" : 26,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 26,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 28,
 				"parent" : 0
 			}
 		]
@@ -51,7 +58,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/include"
 				}
 			],
@@ -77,7 +84,7 @@
 			"id" : "skakspil_lib::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "skakspil::@6890427a1f51a3e7e1df",
+	"id" : "fen_test::@a44f0ac069e85531cdee",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -88,7 +95,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "libskakspil_lib.a",
+				"fragment" : "..\\libskakspil_lib.a",
 				"role" : "libraries"
 			},
 			{
@@ -98,12 +105,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "skakspil",
-	"nameOnDisk" : "skakspil.exe",
+	"name" : "fen_test",
+	"nameOnDisk" : "fen_test.exe",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "tests",
+		"source" : "tests"
 	},
 	"sourceGroups" : 
 	[
@@ -120,7 +127,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/main.cpp",
+			"path" : "tests/fen_test.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

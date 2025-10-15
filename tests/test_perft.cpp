@@ -3,12 +3,11 @@
 #include <iostream>
 
 
-int main() {
-    Game game;
-    int depth = 4;
-    long nodes = Testing::perft(game, depth);
-    
-    std::cout << "depth ("<< depth << ") returned: " << nodes << " moves" <<std::endl;
 
-    return 0;
+int main() {
+    Game g;
+    std::cout << "==== DEPTH 1 ====\n";
+    Testing::perftDivide(g, 1);
+    std::cout << "\n==== DEPTH 2 ====\n";
+    Testing::perftDivide(g, 2);
 }

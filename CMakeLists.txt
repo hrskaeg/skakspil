@@ -10,13 +10,15 @@ add_library(skakspil_lib
     src/board.cpp
     src/game.cpp
     src/rules.cpp
-    src/perft.cpp
+    src/move.cpp
     src/piece_rules/rules_pawn.cpp
     src/piece_rules/rules_rook.cpp
     src/piece_rules/rules_bishop.cpp
     src/piece_rules/rules_queen.cpp
     src/piece_rules/rules_knight.cpp
     src/piece_rules/rules_king.cpp
+    src/utils/perft.cpp
+    src/utils/fen.cpp
 )
 
 target_include_directories(skakspil_lib PUBLIC ${PROJECT_SOURCE_DIR}/src/include)

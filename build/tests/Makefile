@@ -153,6 +153,44 @@ test_perft/fast:
 	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/build
 .PHONY : test_perft/fast
 
+# Convenience name for target.
+tests/CMakeFiles/fen_test.dir/rule:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests/CMakeFiles/fen_test.dir/rule
+.PHONY : tests/CMakeFiles/fen_test.dir/rule
+
+# Convenience name for target.
+fen_test: tests/CMakeFiles/fen_test.dir/rule
+.PHONY : fen_test
+
+# fast build rule for target.
+fen_test/fast:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\fen_test.dir\build.make tests/CMakeFiles/fen_test.dir/build
+.PHONY : fen_test/fast
+
+fen_test.obj: fen_test.cpp.obj
+.PHONY : fen_test.obj
+
+# target to build an object file
+fen_test.cpp.obj:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\fen_test.dir\build.make tests/CMakeFiles/fen_test.dir/fen_test.cpp.obj
+.PHONY : fen_test.cpp.obj
+
+fen_test.i: fen_test.cpp.i
+.PHONY : fen_test.i
+
+# target to preprocess a source file
+fen_test.cpp.i:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\fen_test.dir\build.make tests/CMakeFiles/fen_test.dir/fen_test.cpp.i
+.PHONY : fen_test.cpp.i
+
+fen_test.s: fen_test.cpp.s
+.PHONY : fen_test.s
+
+# target to generate assembly for a file
+fen_test.cpp.s:
+	cd /d C:\Users\madss\ONEDRI~1\DOKUME~1\SYNCED~1\projects\skakspil\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\fen_test.dir\build.make tests/CMakeFiles/fen_test.dir/fen_test.cpp.s
+.PHONY : fen_test.cpp.s
+
 test_moves.obj: test_moves.cpp.obj
 .PHONY : test_moves.obj
 
@@ -210,8 +248,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... test
+	@echo ... fen_test
 	@echo ... test_moves
 	@echo ... test_perft
+	@echo ... fen_test.obj
+	@echo ... fen_test.i
+	@echo ... fen_test.s
 	@echo ... test_moves.obj
 	@echo ... test_moves.i
 	@echo ... test_moves.s

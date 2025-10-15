@@ -21,3 +21,15 @@ target_include_directories(test_perft PRIVATE
 )
 target_link_libraries(test_perft PRIVATE skakspil_lib)
 add_test(NAME PerftTest COMMAND test_perft)
+
+#---- Fen test-------------------------------------------------------------------
+add_executable(fen_test fen_test.cpp)
+
+target_include_directories(fen_test PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/include
+)
+
+target_link_libraries(fen_test PRIVATE skakspil_lib) # if you later make a library target, else skip
+
+add_test(NAME FenTest COMMAND fen_test)
+

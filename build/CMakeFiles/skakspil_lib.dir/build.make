@@ -116,20 +116,20 @@ CMakeFiles/skakspil_lib.dir/src/rules.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/skakspil_lib.dir/src/rules.cpp.s"
 	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\rules.cpp" -o CMakeFiles\skakspil_lib.dir\src\rules.cpp.s
 
-CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj: CMakeFiles/skakspil_lib.dir/flags.make
-CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj: CMakeFiles/skakspil_lib.dir/includes_CXX.rsp
-CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj: C:/Users/madss/OneDrive\ -\ Aarhus\ universitet/Dokumenter/Synced\ VSC\ folder/projects/skakspil/src/perft.cpp
-CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj: CMakeFiles/skakspil_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj"
-	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj -MF CMakeFiles\skakspil_lib.dir\src\perft.cpp.obj.d -o CMakeFiles\skakspil_lib.dir\src\perft.cpp.obj -c "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\perft.cpp"
+CMakeFiles/skakspil_lib.dir/src/move.cpp.obj: CMakeFiles/skakspil_lib.dir/flags.make
+CMakeFiles/skakspil_lib.dir/src/move.cpp.obj: CMakeFiles/skakspil_lib.dir/includes_CXX.rsp
+CMakeFiles/skakspil_lib.dir/src/move.cpp.obj: C:/Users/madss/OneDrive\ -\ Aarhus\ universitet/Dokumenter/Synced\ VSC\ folder/projects/skakspil/src/move.cpp
+CMakeFiles/skakspil_lib.dir/src/move.cpp.obj: CMakeFiles/skakspil_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/skakspil_lib.dir/src/move.cpp.obj"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/skakspil_lib.dir/src/move.cpp.obj -MF CMakeFiles\skakspil_lib.dir\src\move.cpp.obj.d -o CMakeFiles\skakspil_lib.dir\src\move.cpp.obj -c "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\move.cpp"
 
-CMakeFiles/skakspil_lib.dir/src/perft.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/skakspil_lib.dir/src/perft.cpp.i"
-	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\perft.cpp" > CMakeFiles\skakspil_lib.dir\src\perft.cpp.i
+CMakeFiles/skakspil_lib.dir/src/move.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/skakspil_lib.dir/src/move.cpp.i"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\move.cpp" > CMakeFiles\skakspil_lib.dir\src\move.cpp.i
 
-CMakeFiles/skakspil_lib.dir/src/perft.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/skakspil_lib.dir/src/perft.cpp.s"
-	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\perft.cpp" -o CMakeFiles\skakspil_lib.dir\src\perft.cpp.s
+CMakeFiles/skakspil_lib.dir/src/move.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/skakspil_lib.dir/src/move.cpp.s"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\move.cpp" -o CMakeFiles\skakspil_lib.dir\src\move.cpp.s
 
 CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_pawn.cpp.obj: CMakeFiles/skakspil_lib.dir/flags.make
 CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_pawn.cpp.obj: CMakeFiles/skakspil_lib.dir/includes_CXX.rsp
@@ -221,18 +221,50 @@ CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.s"
 	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\piece_rules\rules_king.cpp" -o CMakeFiles\skakspil_lib.dir\src\piece_rules\rules_king.cpp.s
 
+CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj: CMakeFiles/skakspil_lib.dir/flags.make
+CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj: CMakeFiles/skakspil_lib.dir/includes_CXX.rsp
+CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj: C:/Users/madss/OneDrive\ -\ Aarhus\ universitet/Dokumenter/Synced\ VSC\ folder/projects/skakspil/src/utils/perft.cpp
+CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj: CMakeFiles/skakspil_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj -MF CMakeFiles\skakspil_lib.dir\src\utils\perft.cpp.obj.d -o CMakeFiles\skakspil_lib.dir\src\utils\perft.cpp.obj -c "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\utils\perft.cpp"
+
+CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.i"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\utils\perft.cpp" > CMakeFiles\skakspil_lib.dir\src\utils\perft.cpp.i
+
+CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.s"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\utils\perft.cpp" -o CMakeFiles\skakspil_lib.dir\src\utils\perft.cpp.s
+
+CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj: CMakeFiles/skakspil_lib.dir/flags.make
+CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj: CMakeFiles/skakspil_lib.dir/includes_CXX.rsp
+CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj: C:/Users/madss/OneDrive\ -\ Aarhus\ universitet/Dokumenter/Synced\ VSC\ folder/projects/skakspil/src/utils/fen.cpp
+CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj: CMakeFiles/skakspil_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj -MF CMakeFiles\skakspil_lib.dir\src\utils\fen.cpp.obj.d -o CMakeFiles\skakspil_lib.dir\src\utils\fen.cpp.obj -c "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\utils\fen.cpp"
+
+CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.i"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\utils\fen.cpp" > CMakeFiles\skakspil_lib.dir\src\utils\fen.cpp.i
+
+CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.s"
+	C:\MiniGW\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\src\utils\fen.cpp" -o CMakeFiles\skakspil_lib.dir\src\utils\fen.cpp.s
+
 # Object files for target skakspil_lib
 skakspil_lib_OBJECTS = \
 "CMakeFiles/skakspil_lib.dir/src/board.cpp.obj" \
 "CMakeFiles/skakspil_lib.dir/src/game.cpp.obj" \
 "CMakeFiles/skakspil_lib.dir/src/rules.cpp.obj" \
-"CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj" \
+"CMakeFiles/skakspil_lib.dir/src/move.cpp.obj" \
 "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_pawn.cpp.obj" \
 "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_rook.cpp.obj" \
 "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_bishop.cpp.obj" \
 "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_queen.cpp.obj" \
 "CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_knight.cpp.obj" \
-"CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.obj"
+"CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.obj" \
+"CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj" \
+"CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj"
 
 # External object files for target skakspil_lib
 skakspil_lib_EXTERNAL_OBJECTS =
@@ -240,16 +272,18 @@ skakspil_lib_EXTERNAL_OBJECTS =
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/board.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/game.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/rules.cpp.obj
-libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj
+libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/move.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_pawn.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_rook.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_bishop.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_queen.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_knight.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_king.cpp.obj
+libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj
+libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/build.make
 libskakspil_lib.a: CMakeFiles/skakspil_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libskakspil_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\madss\OneDrive - Aarhus universitet\Dokumenter\Synced VSC folder\projects\skakspil\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libskakspil_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\skakspil_lib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\skakspil_lib.dir\link.txt --verbose=$(VERBOSE)
 

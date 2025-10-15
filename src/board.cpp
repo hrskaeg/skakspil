@@ -74,7 +74,7 @@ char Board::pieceToChar(const Piece& piece)const{
     char symbol;
     switch (piece.type)
     {
-    case Piecetype::None : return ' ';
+    case Piecetype::None : return '.';
     case Piecetype::King :   symbol = 'K'; break;
     case Piecetype::Queen :  symbol = 'Q'; break;
     case Piecetype::Rook :   symbol = 'R'; break;
@@ -118,12 +118,14 @@ void Board::executeMove(const Move& move){
         //check for en passant
     if  (movingPiece.type == Piecetype::Pawn &&
         abs(move.to.col - move.from.col) == 1 &&
-        getPiece(move.to.row,move.to.col).type == Piecetype::None){
-
+        getPiece(move.to.row,move.to.col).type == Piecetype::None &&
+        getEnPassantTarget().row == move.to.row &&
+        getEnPassantTarget().col == move.to.col)
+        {
             //en passant capture -> remove pawn behind target square
             int capturedRow = (movingPiece.color == Color::White) ? move.to.row -1 : move.to.row +1;
             setPiece(capturedRow, move.to.col, Piece::makeEmpty());
-            std::cout <<"en passant! Removing pawn at(" << capturedRow <<", " << move.from.row <<")\n";
+            std::cout <<"en passant! Removing pawn at(" << capturedRow <<", " << move.to.col <<")\n";
         }
 
     squares[move.to.row][move.to.col] = movingPiece;            //Paste piece to destination
@@ -132,8 +134,18 @@ void Board::executeMove(const Move& move){
 
     squares[move.from.row][move.from.col] = { Piecetype::None, Color::None, false };    //clears previous square of piece
 
+     Position newEPTarget = {-1, -1}; //set new En passant target if pawn moved 2
+    if (movingPiece.type == Piecetype::Pawn && abs(move.to.row - move.from.row) == 2) {
+        int midRow = (move.to.row + move.from.row) / 2;
+        newEPTarget = { midRow, move.from.col };
+    }
 
-    
-    
+    clearEnPassantTarget();
+    if (newEPTarget.row != -1) {
+        setEnPassantTarget(newEPTarget);
+    }
+
+   
 }
+
 

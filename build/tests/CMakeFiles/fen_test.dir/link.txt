@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\fen_test.dir/objects.a
+C:\MiniGW\ucrt64\bin\ar.exe qc CMakeFiles\fen_test.dir/objects.a @CMakeFiles\fen_test.dir\objects1.rsp
+C:\MiniGW\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\fen_test.dir/objects.a -Wl,--no-whole-archive -o fen_test.exe -Wl,--out-implib,libfen_test.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\fen_test.dir\linkLibs.rsp

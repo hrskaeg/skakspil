@@ -19,8 +19,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						1,
+						2
 					]
 				},
 				{
@@ -35,8 +35,9 @@
 					"source" : "tests",
 					"targetIndexes" : 
 					[
-						2,
-						3
+						0,
+						3,
+						4
 					]
 				}
 			],
@@ -55,23 +56,31 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
 			"targets" : 
 			[
 				{
+					"directoryIndex" : 1,
+					"id" : "fen_test::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-fen_test-Debug-92a02754482542cd349d.json",
+					"name" : "fen_test",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 0,
 					"id" : "skakspil::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-skakspil-Debug-2748a673d710c0b1e3cf.json",
+					"jsonFile" : "target-skakspil-Debug-258dbb59a1b384bd1842.json",
 					"name" : "skakspil",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "skakspil_lib::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-skakspil_lib-Debug-24e4574c15340334f0af.json",
+					"jsonFile" : "target-skakspil_lib-Debug-a2900c470320b8f45abd.json",
 					"name" : "skakspil_lib",
 					"projectIndex" : 0
 				},

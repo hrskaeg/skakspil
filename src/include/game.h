@@ -21,7 +21,9 @@ public:
     MoveStatus tryMove(const Move& move);                             //Attempts move, (validates, and applies if legal)
     void switchTurn();                                          //switches from white to black
     Color getTurn() const;                                      //Returns color of current turn
-    const Board& getBoard() const;                              //rendering access
+    const Board& getBoard() const;   //rendering access
+    Board& getBoard();    //nonconst reference
+    void setTurn(Color turn); //sets turn
     std::vector<Move> generateAllMoves (Color color) const;     //outputs vector with all possible moves
     Position findKing(const Board& board, Color color) const;   //Returns king position based on color provided
     bool inCheck(const Color& color) const;                     //Checks if king is threatened

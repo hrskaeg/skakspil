@@ -19,9 +19,9 @@
 },
 {
   "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
-  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\perft.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\perft.cpp\"",
-  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/perft.cpp",
-  "output": "CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj"
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\move.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\move.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/move.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/move.cpp.obj"
 },
 {
   "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
@@ -61,6 +61,18 @@
 },
 {
   "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\utils\\perft.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\utils\\perft.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/utils/perft.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil_lib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil_lib.dir\\src\\utils\\fen.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\utils\\fen.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/utils/fen.cpp",
+  "output": "CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build",
   "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/skakspil.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\skakspil.dir\\src\\main.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\src\\main.cpp\"",
   "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/src/main.cpp",
   "output": "CMakeFiles/skakspil.dir/src/main.cpp.obj"
@@ -76,5 +88,11 @@
   "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_perft.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\test_perft.dir\\test_perft.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\tests\\test_perft.cpp\"",
   "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/tests/test_perft.cpp",
   "output": "tests/CMakeFiles/test_perft.dir/test_perft.cpp.obj"
+},
+{
+  "directory": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests",
+  "command": "C:\\MiniGW\\ucrt64\\bin\\g++.exe  @CMakeFiles/fen_test.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\fen_test.dir\\fen_test.cpp.obj -c \"C:\\Users\\madss\\OneDrive - Aarhus universitet\\Dokumenter\\Synced VSC folder\\projects\\skakspil\\tests\\fen_test.cpp\"",
+  "file": "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/tests/fen_test.cpp",
+  "output": "tests/CMakeFiles/fen_test.dir/fen_test.cpp.obj"
 }
 ]

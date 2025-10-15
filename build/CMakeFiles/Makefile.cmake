@@ -128,4 +128,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/skakspil.dir/DependInfo.cmake"
   "tests/CMakeFiles/test_moves.dir/DependInfo.cmake"
   "tests/CMakeFiles/test_perft.dir/DependInfo.cmake"
+  "tests/CMakeFiles/fen_test.dir/DependInfo.cmake"
   )

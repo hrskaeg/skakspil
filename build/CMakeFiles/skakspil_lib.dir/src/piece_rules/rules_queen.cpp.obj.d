@@ -18,14 +18,73 @@ CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_queen.cpp.obj: \
  C:/MiniGW/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
  C:/MiniGW/ucrt64/include/stddef.h \
  C:/Users/madss/ONEDRI~1/DOKUME~1/SYNCED~1/projects/skakspil/src/include/move.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/cmath \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/string \
  C:/MiniGW/ucrt64/include/c++/14.2.0/bits/requires_hosted.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/ext/type_traits.h \
- C:/MiniGW/ucrt64/include/math.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/std_abs.h \
- C:/MiniGW/ucrt64/include/stdlib.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stringfwd.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/memoryfwd.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/char_traits.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/postypes.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/cwchar \
+ C:/MiniGW/ucrt64/include/wchar.h \
+ C:/MiniGW/ucrt64/include/corecrt_stdio_config.h \
  C:/MiniGW/ucrt64/include/corecrt_wstdlib.h \
+ C:/MiniGW/ucrt64/include/_mingw_off_t.h \
+ C:/MiniGW/ucrt64/include/_mingw_stat64.h \
+ C:/MiniGW/ucrt64/include/swprintf.inl \
+ C:/MiniGW/ucrt64/include/sec_api/wchar_s.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/type_traits \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/version.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/allocator.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/new_allocator.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/new \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/exception.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/functexcept.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/exception_defines.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/move.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/localefwd.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/clocale \
+ C:/MiniGW/ucrt64/include/locale.h C:/MiniGW/ucrt64/include/stdio.h \
+ C:/MiniGW/ucrt64/include/sec_api/stdio_s.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/iosfwd \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/cctype \
+ C:/MiniGW/ucrt64/include/ctype.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/ostream_insert.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/cxxabi_forced.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/concept_check.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/debug/assertions.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_iterator.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/ext/type_traits.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/ptr_traits.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_function.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/backward/binders.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/ext/numeric_traits.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_algobase.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_pair.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/utility.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/debug/debug.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/predefined_ops.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bit \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/concepts \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/refwrap.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/invoke.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/range_access.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/initializer_list \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/basic_string.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/ext/alloc_traits.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/alloc_traits.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_construct.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/string_view \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/functional_hash.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/hash_bytes.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/string_view.tcc \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/ext/string_conversions.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/cstdlib \
+ C:/MiniGW/ucrt64/include/stdlib.h \
  C:/MiniGW/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
  C:/MiniGW/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
  C:/MiniGW/ucrt64/include/limits.h \
@@ -34,26 +93,19 @@ CMakeFiles/skakspil_lib.dir/src/piece_rules/rules_queen.cpp.obj: \
  C:/MiniGW/ucrt64/include/malloc.h \
  C:/MiniGW/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
  C:/MiniGW/ucrt64/include/errno.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/version.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/std_abs.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/cstdio \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/cerrno \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/charconv.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/basic_string.tcc \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/memory_resource.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/cstddef \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/uses_allocator.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/uses_allocator_args.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/tuple \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/cmath \
+ C:/MiniGW/ucrt64/include/math.h \
  C:/MiniGW/ucrt64/include/c++/14.2.0/bits/specfun.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_algobase.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/functexcept.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/exception_defines.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/ext/numeric_traits.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_pair.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/type_traits \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/move.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/utility.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/concept_check.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/debug/assertions.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_iterator.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/ptr_traits.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/debug/debug.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bits/predefined_ops.h \
- C:/MiniGW/ucrt64/include/c++/14.2.0/bit \
- C:/MiniGW/ucrt64/include/c++/14.2.0/concepts \
  C:/MiniGW/ucrt64/include/c++/14.2.0/limits \
  C:/MiniGW/ucrt64/include/c++/14.2.0/tr1/gamma.tcc \
  C:/MiniGW/ucrt64/include/c++/14.2.0/tr1/special_function_util.h \

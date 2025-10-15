@@ -177,6 +177,19 @@ test_perft/fast:
 	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\test_perft.dir\build.make tests/CMakeFiles/test_perft.dir/build
 .PHONY : test_perft/fast
 
+#=============================================================================
+# Target rules for targets named fen_test
+
+# Build rule for target.
+fen_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 fen_test
+.PHONY : fen_test
+
+# fast build rule for target.
+fen_test/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\fen_test.dir\build.make tests/CMakeFiles/fen_test.dir/build
+.PHONY : fen_test/fast
+
 src/board.obj: src/board.cpp.obj
 .PHONY : src/board.obj
 
@@ -249,29 +262,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil.dir\build.make CMakeFiles/skakspil.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/perft.obj: src/perft.cpp.obj
-.PHONY : src/perft.obj
+src/move.obj: src/move.cpp.obj
+.PHONY : src/move.obj
 
 # target to build an object file
-src/perft.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/perft.cpp.obj
-.PHONY : src/perft.cpp.obj
+src/move.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/move.cpp.obj
+.PHONY : src/move.cpp.obj
 
-src/perft.i: src/perft.cpp.i
-.PHONY : src/perft.i
+src/move.i: src/move.cpp.i
+.PHONY : src/move.i
 
 # target to preprocess a source file
-src/perft.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/perft.cpp.i
-.PHONY : src/perft.cpp.i
+src/move.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/move.cpp.i
+.PHONY : src/move.cpp.i
 
-src/perft.s: src/perft.cpp.s
-.PHONY : src/perft.s
+src/move.s: src/move.cpp.s
+.PHONY : src/move.s
 
 # target to generate assembly for a file
-src/perft.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/perft.cpp.s
-.PHONY : src/perft.cpp.s
+src/move.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/move.cpp.s
+.PHONY : src/move.cpp.s
 
 src/piece_rules/rules_bishop.obj: src/piece_rules/rules_bishop.cpp.obj
 .PHONY : src/piece_rules/rules_bishop.obj
@@ -441,6 +454,54 @@ src/rules.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/rules.cpp.s
 .PHONY : src/rules.cpp.s
 
+src/utils/fen.obj: src/utils/fen.cpp.obj
+.PHONY : src/utils/fen.obj
+
+# target to build an object file
+src/utils/fen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.obj
+.PHONY : src/utils/fen.cpp.obj
+
+src/utils/fen.i: src/utils/fen.cpp.i
+.PHONY : src/utils/fen.i
+
+# target to preprocess a source file
+src/utils/fen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.i
+.PHONY : src/utils/fen.cpp.i
+
+src/utils/fen.s: src/utils/fen.cpp.s
+.PHONY : src/utils/fen.s
+
+# target to generate assembly for a file
+src/utils/fen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/utils/fen.cpp.s
+.PHONY : src/utils/fen.cpp.s
+
+src/utils/perft.obj: src/utils/perft.cpp.obj
+.PHONY : src/utils/perft.obj
+
+# target to build an object file
+src/utils/perft.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.obj
+.PHONY : src/utils/perft.cpp.obj
+
+src/utils/perft.i: src/utils/perft.cpp.i
+.PHONY : src/utils/perft.i
+
+# target to preprocess a source file
+src/utils/perft.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.i
+.PHONY : src/utils/perft.cpp.i
+
+src/utils/perft.s: src/utils/perft.cpp.s
+.PHONY : src/utils/perft.s
+
+# target to generate assembly for a file
+src/utils/perft.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\skakspil_lib.dir\build.make CMakeFiles/skakspil_lib.dir/src/utils/perft.cpp.s
+.PHONY : src/utils/perft.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -450,6 +511,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... test
+	@echo ... fen_test
 	@echo ... skakspil
 	@echo ... skakspil_lib
 	@echo ... test_moves
@@ -463,9 +525,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/perft.obj
-	@echo ... src/perft.i
-	@echo ... src/perft.s
+	@echo ... src/move.obj
+	@echo ... src/move.i
+	@echo ... src/move.s
 	@echo ... src/piece_rules/rules_bishop.obj
 	@echo ... src/piece_rules/rules_bishop.i
 	@echo ... src/piece_rules/rules_bishop.s
@@ -487,6 +549,12 @@ help:
 	@echo ... src/rules.obj
 	@echo ... src/rules.i
 	@echo ... src/rules.s
+	@echo ... src/utils/fen.obj
+	@echo ... src/utils/fen.i
+	@echo ... src/utils/fen.s
+	@echo ... src/utils/perft.obj
+	@echo ... src/utils/perft.i
+	@echo ... src/utils/perft.s
 .PHONY : help
 
 
