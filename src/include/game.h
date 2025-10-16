@@ -26,14 +26,10 @@ public:
     Board& getBoard();    //nonconst reference
     void setTurn(Color turn); //sets turn
     std::vector<Move> generateAllMoves (Color color) const;     //outputs vector with all possible moves
-    Position findKing(const Board& board, Color color) const;   //Returns king position based on color provided
     bool inCheck(const Color& color) const;                     //Checks if king is threatened
     bool inStalemate(Color color) const;                        //Checks if king is in stalemate
     bool inCheckmate(Color color) const;                        //Checks if king is in checkmate
     void handlePromotion(const Move& move);
-    void executeMove(const Move& move);
-    void postMoveChecks(const Move& move);
-
     
 };
 
