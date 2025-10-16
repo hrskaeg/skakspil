@@ -13,6 +13,10 @@ namespace Rules {
 
     bool isSquareAttacked(const Board& board, const Position& position, const Color& byColor);
 
+    Position findKing(const Board& board, Color color);
+
+    bool isKingSafePostMove(const Board& board, const Move& move);
+
     namespace Pawn {
         enum class MoveType {
             None,

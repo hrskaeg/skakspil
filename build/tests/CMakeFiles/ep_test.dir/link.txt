@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\ep_test.dir/objects.a
+C:\MiniGW\ucrt64\bin\ar.exe qc CMakeFiles\ep_test.dir/objects.a @CMakeFiles\ep_test.dir\objects1.rsp
+C:\MiniGW\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\ep_test.dir/objects.a -Wl,--no-whole-archive -o ep_test.exe -Wl,--out-implib,libep_test.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ep_test.dir\linkLibs.rsp

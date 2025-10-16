@@ -103,6 +103,12 @@ CMakeFiles/skakspil_lib.dir/src/rules.cpp.obj: \
  C:/MiniGW/ucrt64/include/c++/14.2.0/bits/uses_allocator.h \
  C:/MiniGW/ucrt64/include/c++/14.2.0/bits/uses_allocator_args.h \
  C:/MiniGW/ucrt64/include/c++/14.2.0/tuple \
+ C:/Users/madss/ONEDRI~1/DOKUME~1/SYNCED~1/projects/skakspil/src/include/game.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/vector \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/vector.tcc \
  C:/MiniGW/ucrt64/include/c++/14.2.0/cmath \
  C:/MiniGW/ucrt64/include/math.h \
  C:/MiniGW/ucrt64/include/c++/14.2.0/bits/specfun.h \
@@ -118,4 +124,47 @@ CMakeFiles/skakspil_lib.dir/src/rules.cpp.obj: \
  C:/MiniGW/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
  C:/MiniGW/ucrt64/include/c++/14.2.0/tr1/poly_hermite.tcc \
  C:/MiniGW/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
- C:/MiniGW/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc
+ C:/MiniGW/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/iostream \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/ostream \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/ios \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/exception \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/exception_ptr.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/typeinfo \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/nested_exception.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/ios_base.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/ext/atomicity.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+ C:/MiniGW/ucrt64/include/pthread.h C:/MiniGW/ucrt64/include/sys/types.h \
+ C:/MiniGW/ucrt64/include/process.h \
+ C:/MiniGW/ucrt64/include/corecrt_startup.h \
+ C:/MiniGW/ucrt64/include/signal.h \
+ C:/MiniGW/ucrt64/include/pthread_signal.h \
+ C:/MiniGW/ucrt64/include/time.h C:/MiniGW/ucrt64/include/sys/timeb.h \
+ C:/MiniGW/ucrt64/include/sec_api/sys/timeb_s.h \
+ C:/MiniGW/ucrt64/include/_timeval.h \
+ C:/MiniGW/ucrt64/include/pthread_time.h \
+ C:/MiniGW/ucrt64/include/pthread_compat.h \
+ C:/MiniGW/ucrt64/include/pthread_unistd.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/locale_classes.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/locale_classes.tcc \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/system_error \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/stdexcept \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/streambuf \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/streambuf.tcc \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/basic_ios.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/locale_facets.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/cwctype \
+ C:/MiniGW/ucrt64/include/wctype.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/streambuf_iterator.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/locale_facets.tcc \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/basic_ios.tcc \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/ostream.tcc \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/istream \
+ C:/MiniGW/ucrt64/include/c++/14.2.0/bits/istream.tcc

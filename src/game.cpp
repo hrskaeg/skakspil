@@ -6,33 +6,12 @@
 MoveStatus Game::tryMove(const Move& move){
 const Piece& piece = board.getPiece(move.from.row, move.from.col);
 
-//validates if turn
-if (piece.color != getTurn())
-{
-    return MoveStatus::NotYourTurn;
-}
 
-//validates if legal
-if (!Rules::isValidMove(board,move))
-{
-    return MoveStatus::IllegalMove;
-}
-
-//validates if trying to move empty square
-if (piece.type == Piecetype::None)
-    {
-        return MoveStatus::MovingEmpty;
-    }
-
-//Below block checks kingsafety post move is executed. Can't check own king by moving piece
-Board tempBoard = board;    //temp board to simulate king safety after move is executed.
-tempBoard.executeMove(move);
-Position kingPos = findKing(tempBoard,getTurn());
-Color enemyColor = (piece.color == Color::White) ? Color::Black : Color::White; //Finds enemyColor
-if(Rules::isSquareAttacked(tempBoard,kingPos,enemyColor)){   //Checks if kingPos is attacked after move executed
-
-    return MoveStatus::IllegalMove;
-}
+//Validations
+if (piece.color != getTurn()){return MoveStatus::NotYourTurn;}
+if (!Rules::isValidMove(board,move)){return MoveStatus::IllegalMove;}
+if (piece.type == Piecetype::None){return MoveStatus::MovingEmpty;}
+if (!Rules::isKingSafePostMove(board,move)){return MoveStatus::KingThreatened;}
 
 //Logs move in history
 moveHistory.push_back({
@@ -40,13 +19,12 @@ moveHistory.push_back({
     move.to,
     piece,
     board.getPiece(move.to.row, move.to.col)
-
 });
+
+
 //Performs move
 board.executeMove(move);
-//checks for castling
-    if (piece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
-    handleCastling(move);}
+    
 handlePromotion(move);
 switchTurn();
 return MoveStatus::Success;
@@ -75,19 +53,7 @@ void Game::setTurn(Color turn){
 
 
 
-Position Game::findKing(const Board& board, Color color) const{
-for (int r = 0; r < 8; r++){ //Iterates through all rows
-    for (int c = 0; c < 8; c++){ //combined with iterating through all columns = iterates all squares on board.
-        const Piece& piece = board.getPiece(r,c); //gets piece of current square ite
-        if (piece.type == Piecetype::King && piece.color == color)
-        {
-            return {r,c};
-        }
-}
-}
-//If no king found (should never happen)
-return {-1,-1};
-}
+
 
 Color Game::getTurn() const{return currentTurn;}            //Returns color of current turn
 
@@ -109,7 +75,7 @@ std::vector<Move> Game::generateAllMoves (Color color) const{
                         tempBoard.executeMove(m);
 
                         //check kingsafety postmove
-                        Position kingPos = findKing(tempBoard, color);
+                        Position kingPos = Rules::findKing(tempBoard, color);
                         Color enemyColor = (color == Color::White) ? Color::Black : Color::White;
 
                         //only add move if king is safe after move
@@ -126,7 +92,7 @@ std::vector<Move> Game::generateAllMoves (Color color) const{
 
 //returns True if color passed is in check
 bool Game::inCheck(const Color& color)const{ 
-Position kingPos = findKing(board,color);
+Position kingPos = Rules::findKing(board,color);
 Color enemyColor = (color == Color::White) ? Color::Black : Color::White; //Finds enemyColor
 return Rules::isSquareAttacked(board, kingPos, enemyColor);
 
@@ -142,7 +108,7 @@ for (const Move& m : moves) { //iterates through all moves in vector 'moves'
     Board tempBoard = board;
     tempBoard.executeMove(m); //executes current ite on tempboard
 
-    Position kingPos = findKing(tempBoard,color);
+    Position kingPos = Rules::findKing(tempBoard,color);
     Color enemyColor = (color == Color::White) ? Color::Black : Color::White; //finds king, sets enemyColor
 
         if (!Rules::isSquareAttacked(tempBoard, kingPos,enemyColor)){  
@@ -164,7 +130,7 @@ for (const Move& m : moves) { //iterates through all moves in vector 'moves'
     Board tempBoard = board;
     tempBoard.executeMove(m); //executes current ite on tempboard
 
-    Position kingPos = findKing(tempBoard,color);
+    Position kingPos = Rules::findKing(tempBoard,color);
     Color enemyColor = (color == Color::White) ? Color::Black : Color::White; //finds king, sets enemyColor
 
         if (!Rules::isSquareAttacked(tempBoard, kingPos,enemyColor)){  
@@ -189,20 +155,4 @@ if (p.type == Piecetype::Pawn){
 
 }
 
-void Game::handleCastling(const Move& move){
-int row = move.from.row;
-bool kingSide = (move.to.col > move.from.col); //The king on col 4 is castling kingside (short castles), if the rook square is less than king square. If rook square larger, its queenside castles(long)
 
-//find rook's starting and ending position
-int rookFrom = kingSide ? 7 : 0;
-int rookTo = kingSide ? 5 : 3;    
-
-//moves rook
-Piece rook = board.getPiece(row, rookFrom);
-rook.hasMoved = true;
-board.setPiece(row, rookTo, rook);
-board.setPiece(row, rookFrom, Piece::makeEmpty());
-std::cout << (kingSide ? "Kingside" : "Queenside") << " Castling executed!" << std::endl;
-
-
-}

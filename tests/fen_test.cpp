@@ -3,7 +3,7 @@
 #include "fen.h"
 #include "game.h"
 #include "board.h"
-#include "perft.h" // only if you want to use perft()
+#include "perft.h"
 
 int main() {
     std::cout << "=== FEN Loader Test ===\n";
@@ -33,7 +33,7 @@ int main() {
         std::cout << "\nLoaded Kiwipete test position:\n";
         game.getBoard().printBoard();
 
-        // Optional: small perft test (reference: perft(1)=48, perft(2)=2039)
+        //Perfttest on kiwipete (reference: perft(1)=48, perft(2)=2039)
         long nodes = Testing::perft(game, 2);
         std::cout << "Perft(2) = " << nodes << std::endl;
     }

@@ -23,7 +23,6 @@ if(!Rules::pathIsClear(board,move)) //path must be clear (not counting destinati
     return false;
 }
 
-//missing check for, if currently blocking threat to king
 
 //destination must be empty or contain enemy
 return  Rules::isEnemyPiece(board,move) ||

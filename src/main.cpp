@@ -66,11 +66,13 @@ int main(){
         case MoveStatus::MovingEmpty :
             std::cout << "No piece selected";
             break;
+        case MoveStatus::KingThreatened : 
+            std::cout << "King is threatened post move. Illegal!" << std::endl;
+            break;
         case MoveStatus::Success :
-            std::cout << input << std::endl;;
+            std::cout << input << std::endl;
             game.getBoard().printBoard();
             break;
-
         default:
             std::cout << "Movestatus error!!";
             break;

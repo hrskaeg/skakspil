@@ -1,6 +1,8 @@
 #include "include/rules.h"
 #include "include/piece.h"
+#include "game.h"
 #include <cmath>
+#include <iostream>
 
 
 
@@ -38,7 +40,7 @@ int stepCol;
     else {
         stepCol = -1;
     }
-//Iterates through each 'step' on the board, and returns false if blocked. Loop stops 1 short of destination square (while statement)
+//Iterates through each 'step' on the board, and returns false if blocked. Loop stops 1 short of destination square
 int r = move.from.row + stepRow, c = move.from.col + stepCol;
 while (r != move.to.row || c != move.to.col) {
     const Piece& piece = board.getPiece(r, c);
@@ -67,9 +69,38 @@ if (toPiece.color == Color::None) //if empty return false
 
 }
 
+Position Rules::findKing(const Board& board, Color color){
+for (int r = 0; r < 8; r++){ //Iterates through all rows
+    for (int c = 0; c < 8; c++){ //combined with iterating through all columns = iterates all squares on board.
+        const Piece& piece = board.getPiece(r,c); //gets piece of current square ite
+        if (piece.type == Piecetype::King && piece.color == color)
+        {
+            return {r,c};
+        }
+}
+}
+//If no king found (should never happen)
+return {-1,-1};
+}
+
+//checks kingsafety post move is executed. Can't check own king by moving piece
+bool Rules::isKingSafePostMove(const Board& board, const Move& move){
+    Color pieceColor = board.getPiece(move.from.row,move.from.col).color;
+    Board tempBoard = board;    //temp board to simulate king safety after move is executed.
+    tempBoard.executeMove(move);
+
+    
+    Position kingPos = findKing(tempBoard,pieceColor);
+    Color enemyColor = (pieceColor == Color::White) ? Color::Black : Color::White; //Finds enemyColor
+    if(Rules::isSquareAttacked(tempBoard,kingPos,enemyColor)){   //Checks if kingPos is attacked after move executed
+    return false;
+}
+else{return true;} //if not, king is safe post move.
+}
 
 bool Rules::isValidMove(const Board& board, const Move& move){
     const Piece& piece = board.getPiece(move.from.row, move.from.col);
+
 
     switch (piece.type)
     {

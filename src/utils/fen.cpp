@@ -45,7 +45,7 @@ void loadPosition(Game& game, const std::string& fen){
     }
 game.setTurn(turnPart == "w" ? Color::White : Color::Black);
 
-    // --- Castling rights ---
+    //Castling rights
     // If you track them in your Game or Board, mark the rooks and king as having not moved.
     if (castlingPart.find('K') != std::string::npos)
         game.getBoard().getPiece(0, 4).hasMoved = false; // white king

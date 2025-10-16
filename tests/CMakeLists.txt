@@ -1,7 +1,7 @@
 add_executable(test_moves ${CMAKE_CURRENT_SOURCE_DIR}/test_moves.cpp)
 target_include_directories(test_moves PRIVATE ${PROJECT_SOURCE_DIR}/src/include)
 
-# ✅ Link to the reusable core logic library
+# Link to the reusable core logic library
 target_link_libraries(test_moves PRIVATE skakspil_lib)
 
 add_test(NAME TestMoves COMMAND test_moves)
@@ -29,7 +29,7 @@ target_include_directories(fen_test PRIVATE
     ${PROJECT_SOURCE_DIR}/src/include
 )
 
-target_link_libraries(fen_test PRIVATE skakspil_lib) # if you later make a library target, else skip
+target_link_libraries(fen_test PRIVATE skakspil_lib)
 
 add_test(NAME FenTest COMMAND fen_test)
 

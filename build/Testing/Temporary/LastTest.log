@@ -1,13 +1,38 @@
-Start testing: Oct 15 22:27 Romance Summer Time
+Start testing: Oct 16 20:15 Romance Summer Time
 ----------------------------------------------------------
-3/4 Testing: PerftTest
-3/4 Test: PerftTest
-Command: "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests/test_perft.exe"
+4/4 Testing: FenTest
+4/4 Test: FenTest
+Command: "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests/fen_test.exe"
 Directory: C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/build/tests
-"PerftTest" start time: Oct 15 22:27 Romance Summer Time
+"FenTest" start time: Oct 16 20:15 Romance Summer Time
 Output:
 ----------------------------------------------------------
-Enter FEN string: Enter perft depth: 
+=== FEN Loader Test ===
+
+8 | r n b q k b n r 
+7 | p p p p p p p p 
+6 | . . . . . . . . 
+5 | . . . . . . . . 
+4 | . . . . . . . . 
+3 | . . . . . . . . 
+2 | P P P P P P P P 
+1 | R N B Q K B N R 
+    ---------------
+    a b c d e f g h
+Loaded starting position:
+
+8 | r n b q k b n r 
+7 | p p p p p p p p 
+6 | . . . . . . . . 
+5 | . . . . . . . . 
+4 | . . . . . . . . 
+3 | . . . . . . . . 
+2 | P P P P P P P P 
+1 | R N B Q K B N R 
+    ---------------
+    a b c d e f g h
+Perft(2) = 400
+
 8 | r . . . k . . r 
 7 | p . p p q p b . 
 6 | b n . . p n p . 
@@ -19,64 +44,309 @@ Enter FEN string: Enter perft depth:
     ---------------
     a b c d e f g h
 
-FEN: r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 
-a1b1: 44
-a1c1: 44
-a1d1: 44
-e1c1: 44
-e1d1: 44
-e1f1: 44
-e1g1: 44
-h1f1: 44
-h1g1: 44
-a2a3: 45
+Loaded Kiwipete test position:
+
+8 | r . . . k . . r 
+7 | p . p p q p b . 
+6 | b n . . p n p . 
+5 | . . . P N . . . 
+4 | . p . . P . . . 
+3 | . . N . . Q . p 
+2 | P P P B B P P P 
+1 | R . . . K . . R 
+    ---------------
+    a b c d e f g h
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+en passant! Removing pawn at(3, 0)
+Queenside Castling executed!
+Kingside Castling executed!
 en passant! Removing pawn at(3, 0)
 en passant! Removing pawn at(3, 0)
-en passant! Removing pawn at(3, 0)
-a2a4: 45
-b2b3: 43
-d2c1: 44
-d2e3: 44
-d2f4: 44
-d2g5: 42
-d2h6: 42
-e2d1: 45
-e2f1: 45
-e2d3: 43
-e2c4: 42
-e2b5: 40
-e2a6: 37
-g2g3: 43
-g2h3: 44
-g2g4: 42
-c3b1: 43
-c3d1: 43
-c3a4: 43
-c3b5: 40
-f3d3: 43
-f3e3: 44
-f3g3: 44
-f3h3: 44
-f3f4: 44
-f3g4: 43
-f3f5: 46
-f3h5: 44
-f3f6: 40
-d5d6: 42
-d5e6: 47
-e5d3: 44
-e5c4: 43
-e5g4: 44
-e5c6: 42
-e5g6: 42
-e5d7: 46
-e5f7: 45
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Queenside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Kingside Castling executed!
+Perft(2) = 2082
+
+=== FEN Loader Test Completed ===
 <end of output>
-Test time =  10.93 sec
+Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"PerftTest" end time: Oct 15 22:27 Romance Summer Time
-"PerftTest" time elapsed: 00:00:10
+"FenTest" end time: Oct 16 20:15 Romance Summer Time
+"FenTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 15 22:27 Romance Summer Time
+End testing: Oct 16 20:15 Romance Summer Time

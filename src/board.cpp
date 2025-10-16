@@ -112,8 +112,12 @@ std::cout << "    a b c d e f g h\n"; //labels at bottom
 
 
 void Board::executeMove(const Move& move){
-
     Piece movingPiece = squares[move.from.row][move.from.col];  //Copy piece to be moved
+
+    //checks for castling, and handles rook movement if true
+    if (movingPiece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
+    handleCastling(move);
+    }
         
         //check for en passant
     if  (movingPiece.type == Piecetype::Pawn &&
@@ -134,6 +138,10 @@ void Board::executeMove(const Move& move){
 
     squares[move.from.row][move.from.col] = { Piecetype::None, Color::None, false };    //clears previous square of piece
 
+   
+
+
+    //Handle new en passant target if pawn pushed 2
     if (movingPiece.type == Piecetype::Pawn && abs(move.to.row - move.from.row) == 2) {
         int midRow = (move.to.row + move.from.row) / 2;
         setEnPassantTarget({ midRow, move.from.col });
@@ -143,4 +151,21 @@ void Board::executeMove(const Move& move){
     }
     }
 
+void Board::handleCastling(const Move& move){
+int row = move.from.row;
+bool kingSide = (move.to.col > move.from.col); //The king on col 4 is castling kingside (short castles), if the rook square is less than king square. If rook square larger, its queenside castles(long)
+
+//find rook's starting and ending position
+int rookFrom = kingSide ? 7 : 0;
+int rookTo = kingSide ? 5 : 3;    
+
+//moves rook
+Piece rook = getPiece(row, rookFrom);
+rook.hasMoved = true;
+setPiece(row, rookTo, rook);
+setPiece(row, rookFrom, Piece::makeEmpty());
+std::cout << (kingSide ? "Kingside" : "Queenside") << " Castling executed!" << std::endl;
+
+
+}
 

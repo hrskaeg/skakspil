@@ -18,4 +18,5 @@ class Board {
     void setEnPassantTarget(Position pos) { enPassantTarget = pos; }
     void clearEnPassantTarget() { enPassantTarget = {-1,-1}; }
     Position getEnPassantTarget() const {return enPassantTarget; }
+    void handleCastling(const Move& move);
 };

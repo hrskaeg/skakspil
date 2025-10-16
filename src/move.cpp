@@ -1,6 +1,7 @@
 #include "move.h"
 #include <string>
 
+//converts positoin to string/char
 std::string Move::toString() const {
     auto posToStr = [](const Position& p) {
         std::string s;
