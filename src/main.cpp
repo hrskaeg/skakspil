@@ -69,6 +69,12 @@ int main(){
         case MoveStatus::KingThreatened : 
             std::cout << "King is threatened post move. Illegal!" << std::endl;
             break;
+         case MoveStatus::CheckMate :
+             std::cout << "Checkmate. Game over: " << ((game.getTurn() == Color::White) ? "White " : "Black ") << "wins." <<std::endl;
+            return false;
+        case MoveStatus::StaleMate : 
+            std::cout << "Stalemate. Game is a draw!";
+            return false;
         case MoveStatus::Success :
             std::cout << input << std::endl;
             game.getBoard().printBoard();
@@ -77,6 +83,7 @@ int main(){
             std::cout << "Movestatus error!!";
             break;
         }
+        
         
 
         //switch turn and saving moves happens in trymove

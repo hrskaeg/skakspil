@@ -1,6 +1,7 @@
 #include "perft.h"
 #include <iostream>
 #include <vector>
+#include <iostream>
 
 namespace Testing {
 
@@ -14,7 +15,7 @@ long perft(Game& game, int depth) {
     for (const auto& m : moves) {
         Game next = game;
         auto res = next.tryMove(m);
-        if (res != MoveStatus::Success) continue;
+        if (res != MoveStatus::Success){continue;};
         nodes += perft(next, depth - 1);
     }
 

@@ -9,6 +9,8 @@ enum class MoveStatus {
     NotYourTurn,
     IllegalMove,
     MovingEmpty,
+    CheckMate,
+    StaleMate,
     KingThreatened
 };
 

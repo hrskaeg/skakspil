@@ -8,7 +8,6 @@ Board::Board() {
     setupDefault();
 }
 
-//Board startposition
 void Board::setupDefault(){
 //White backrank
 squares[0][0] = {Piecetype::Rook,   Color::White};
@@ -52,8 +51,6 @@ for (int row = 2; row < 6; row++)
 
 }
 
-
-
 const Piece& Board::getPiece(int row, int col) const{
 return squares[row][col];
 
@@ -69,7 +66,6 @@ void Board::setPiece(int row, int col, Piece piece){
     squares[row][col] = piece;
 }
 
-//Returns lowercase letter for black, Uppercase for white
 char Board::pieceToChar(const Piece& piece)const{
     char symbol;
     switch (piece.type)
@@ -109,8 +105,6 @@ std::cout << "    ---------------\n";
 std::cout << "    a b c d e f g h\n"; //labels at bottom
 }
 
-
-
 void Board::executeMove(const Move& move){
     Piece movingPiece = squares[move.from.row][move.from.col];  //Copy piece to be moved
 
@@ -138,6 +132,8 @@ void Board::executeMove(const Move& move){
 
     squares[move.from.row][move.from.col] = { Piecetype::None, Color::None, false };    //clears previous square of piece
 
+
+
    
 
 
@@ -146,7 +142,7 @@ void Board::executeMove(const Move& move){
         int midRow = (move.to.row + move.from.row) / 2;
         setEnPassantTarget({ midRow, move.from.col });
     }else{
-        setEnPassantTarget({-1,-1});
+        clearEnPassantTarget();
 
     }
     }
@@ -164,8 +160,6 @@ Piece rook = getPiece(row, rookFrom);
 rook.hasMoved = true;
 setPiece(row, rookTo, rook);
 setPiece(row, rookFrom, Piece::makeEmpty());
-std::cout << (kingSide ? "Kingside" : "Queenside") << " Castling executed!" << std::endl;
-
-
+//std::cout << (kingSide ? "Kingside" : "Queenside") << " Castling executed!" << std::endl;
 }
 

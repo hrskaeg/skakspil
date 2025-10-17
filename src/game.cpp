@@ -26,6 +26,14 @@ moveHistory.push_back({
 board.executeMove(move);
     
 handlePromotion(move);
+ 
+//Check for 'checkmate' or 'stalemate'
+if (inCheckmate((getTurn() == Color::White) ? Color::Black : Color::White)){
+    return MoveStatus::CheckMate;
+}else if (inStalemate((getTurn() == Color::White) ? Color::Black : Color::White)){
+    return MoveStatus::StaleMate;
+}
+
 switchTurn();
 return MoveStatus::Success;
 }
@@ -36,28 +44,22 @@ Game::Game()
     //initializes starting position
     board.setupDefault();
 }
+
 void Game::switchTurn(){
     currentTurn = (currentTurn == Color::White) ? Color::Black : Color::White;
 
     //std::cout << "Turn switched. " << ((currentTurn == Color::White) ? "White" : "Black") << " to move" << std::endl;
 }                          
-
-
-                 
+              
 const Board& Game::getBoard()const{ return board;} //returns current board when called
+
 Board& Game::getBoard() { return board; } 
 
 void Game::setTurn(Color turn){
     currentTurn = turn;
 }
 
-
-
-
-
 Color Game::getTurn() const{return currentTurn;}            //Returns color of current turn
-
-
 //returns vector with all possible moves for color provided
 std::vector<Move> Game::generateAllMoves (Color color) const{
     std::vector<Move> moves;
@@ -89,7 +91,6 @@ std::vector<Move> Game::generateAllMoves (Color color) const{
     }
     return moves;
 }
-
 //returns True if color passed is in check
 bool Game::inCheck(const Color& color)const{ 
 Position kingPos = Rules::findKing(board,color);
@@ -97,7 +98,6 @@ Color enemyColor = (color == Color::White) ? Color::Black : Color::White; //Find
 return Rules::isSquareAttacked(board, kingPos, enemyColor);
 
 }
-
 //returns true if in stalemate
 bool Game::inStalemate(Color color)const{
 if (inCheck(color)) return false; //if king is in check, not stalemate
@@ -118,7 +118,6 @@ for (const Move& m : moves) { //iterates through all moves in vector 'moves'
 }
 return true;//No legal moves to avoid checkmate
 }
-
 //returns true if in checkmate
 bool Game::inCheckmate(Color color)const{
 if (!inCheck(color)) return false;
@@ -140,7 +139,6 @@ for (const Move& m : moves) { //iterates through all moves in vector 'moves'
 }
 return true;//No legal moves to avoid checkmate
 }
-
 //When called, swaps the pawn on the backrank to a queen
 void Game::handlePromotion(const Move& move){
 Piece& p = board.getPiece(move.to.row,move.to.col);

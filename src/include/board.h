@@ -6,7 +6,7 @@ class Board {
     private:
         Piece squares[8][8];    //internal board representation
         char pieceToChar(const Piece& p) const;
-        Position enPassantTarget = {-1,-1};
+        Position enPassantTarget = {-1,1};
     public:
     Board();                                        //Constructor (Sets up a new board)
     void setupDefault();                            //Sets up all pieces to start position
@@ -19,4 +19,5 @@ class Board {
     void clearEnPassantTarget() { enPassantTarget = {-1,-1}; }
     Position getEnPassantTarget() const {return enPassantTarget; }
     void handleCastling(const Move& move);
+
 };

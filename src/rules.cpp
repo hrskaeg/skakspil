@@ -49,7 +49,6 @@ while (r != move.to.row || c != move.to.col) {
 }
 return true; //reached destination without any pieces blocking
 }
-
 //Checks if given position contains enemy unit.
 bool Rules::isEnemyPiece(const Board& board, const Move& move){
 Piece fromPiece = board.getPiece(move.from.row, move.from.col);
@@ -82,7 +81,6 @@ for (int r = 0; r < 8; r++){ //Iterates through all rows
 //If no king found (should never happen)
 return {-1,-1};
 }
-
 //checks kingsafety post move is executed. Can't check own king by moving piece
 bool Rules::isKingSafePostMove(const Board& board, const Move& move){
     Color pieceColor = board.getPiece(move.from.row,move.from.col).color;
@@ -115,7 +113,6 @@ bool Rules::isValidMove(const Board& board, const Move& move){
         return false;
     }
 }
-
 //position is position to be checked for threats. byColor is the color that we want to see if threatens square
 bool Rules::isSquareAttacked(const Board& board, const Position& position, const Color& byColor){
 for (int r = 0; r < 8; r++){ //Iterates through all rows
