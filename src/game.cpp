@@ -3,7 +3,7 @@
 #include <vector>
 #include <iostream>
 
-MoveStatus Game::tryMove(const Move& move){
+MoveStatus Game::tryMove(const Move& move, Piecetype promotionType){
 const Piece& piece = board.getPiece(move.from.row, move.from.col);
 
 
@@ -12,6 +12,7 @@ if (piece.color != getTurn()){return MoveStatus::NotYourTurn;}
 if (!Rules::isValidMove(board,move)){return MoveStatus::IllegalMove;}
 if (piece.type == Piecetype::None){return MoveStatus::MovingEmpty;}
 if (!Rules::isKingSafePostMove(board,move)){return MoveStatus::KingThreatened;}
+if (validatePromotion(move,promotionType) == MoveStatus::nullPromotion){return MoveStatus::nullPromotion;}
 
 //Logs move in history
 moveHistory.push_back({
@@ -23,19 +24,19 @@ moveHistory.push_back({
 
 
 //Performs move
-board.executeMove(move);
+board.executeMove(move, promotionType);
     
-handlePromotion(move);
+
  
 //Check for 'checkmate' or 'stalemate'
 if (inCheckmate((getTurn() == Color::White) ? Color::Black : Color::White)){
-    return MoveStatus::CheckMate;
-}else if (inStalemate((getTurn() == Color::White) ? Color::Black : Color::White)){
-    return MoveStatus::StaleMate;
-}
+    return MoveStatus::CheckMate;}
+if (inStalemate((getTurn() == Color::White) ? Color::Black : Color::White)){
+    return MoveStatus::StaleMate;}
 
 switchTurn();
 return MoveStatus::Success;
+
 }
 
 Game::Game()
@@ -139,18 +140,17 @@ for (const Move& m : moves) { //iterates through all moves in vector 'moves'
 }
 return true;//No legal moves to avoid checkmate
 }
-//When called, swaps the pawn on the backrank to a queen
-void Game::handlePromotion(const Move& move){
+//When called, handles pawn promotion if applicable
+MoveStatus Game::validatePromotion(const Move& move, Piecetype promotionType){
 Piece& p = board.getPiece(move.to.row,move.to.col);
+if (promotionType == Piecetype::None){return MoveStatus::nullPromotion;} //no promotiontype given
 if (p.type == Piecetype::Pawn){
     if((p.color == Color::White && move.to.row == 7) ||
         (p.color == Color::Black && move.to.row == 0)){
-            p.type = Piecetype::Queen;
-            std::cout << "Pawn promoted to Queen!" << std::endl;
+            return MoveStatus::Success;
         }
 }
-
-
+return MoveStatus::IllegalMove;
 }
 
 

@@ -13,11 +13,11 @@ class Board {
     Piece& getPiece(int row, int col);    
     const Piece& getPiece(int row, int col) const;         //Read-only access to a piece on an index
     void setPiece(int row, int col, Piece piece);   //replace or place a piece
-    void executeMove(const Move& move);     //Move logic (no validation
+    void executeMove(const Move& move, Piecetype promotionPiece = Piecetype::None);     //Move logic (no validation)
     void printBoard()const;
     void setEnPassantTarget(Position pos) { enPassantTarget = pos; }
     void clearEnPassantTarget() { enPassantTarget = {-1,-1}; }
     Position getEnPassantTarget() const {return enPassantTarget; }
     void handleCastling(const Move& move);
-
+    void handlePromotion(const Move& move, Piecetype promotionType);
 };

@@ -33,7 +33,7 @@ void perftDivide(Game& game, int depth) {
     auto moves = game.generateAllMoves(game.getTurn());
     for (const auto& m : moves) {
         Game next = game;
-        auto res = next.tryMove(m);                     
+        auto res = next.tryMove(m);
         if (res == MoveStatus::Success) {
             auto nodes = Testing::perft(next, depth - 1);
             std::cout << m.toString() << ": " << nodes << "\n";

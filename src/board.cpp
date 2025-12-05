@@ -105,14 +105,35 @@ std::cout << "    ---------------\n";
 std::cout << "    a b c d e f g h\n"; //labels at bottom
 }
 
-void Board::executeMove(const Move& move){
-    Piece movingPiece = squares[move.from.row][move.from.col];  //Copy piece to be moved
+void Board::executeMove(const Move& move, Piecetype promotionType){
+    Piece movingPiece;
+    if (promotionType != Piecetype::None){ //if promotion type provided, set moving piece type to it
+        movingPiece = squares[move.from.row][move.from.col];
+        movingPiece.type = promotionType;
+        std::cout << "Pawn promoted to ";
+        switch (promotionType){
+            case Piecetype::Queen:
+                std::cout << "Queen.\n";
+                break;
+            case Piecetype::Rook:
+                std::cout << "Rook.\n";
+                break;
+            case Piecetype::Bishop:
+                std::cout << "Bishop.\n";
+                break;
+            case Piecetype::Knight:
+                std::cout << "Knight.\n";
+                break;
+            default:
+                break;
+        }
+    }else {
+    Piece movingPiece = squares[move.from.row][move.from.col];}  //Copy piece being moved
 
     //checks for castling, and handles rook movement if true
     if (movingPiece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
     handleCastling(move);
-    }
-        
+    }   
         //check for en passant
     if  (movingPiece.type == Piecetype::Pawn &&
         abs(move.to.col - move.from.col) == 1 &&
@@ -132,11 +153,6 @@ void Board::executeMove(const Move& move){
 
     squares[move.from.row][move.from.col] = { Piecetype::None, Color::None, false };    //clears previous square of piece
 
-
-
-   
-
-
     //Handle new en passant target if pawn pushed 2
     if (movingPiece.type == Piecetype::Pawn && abs(move.to.row - move.from.row) == 2) {
         int midRow = (movingPiece.color == Color::White) ? move.from.row -1 : move.from.row +1;
@@ -146,6 +162,7 @@ void Board::executeMove(const Move& move){
 
     }
     }
+    
 
 void Board::handleCastling(const Move& move){
 int row = move.from.row;
