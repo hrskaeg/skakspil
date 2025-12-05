@@ -139,7 +139,7 @@ void Board::executeMove(const Move& move){
 
     //Handle new en passant target if pawn pushed 2
     if (movingPiece.type == Piecetype::Pawn && abs(move.to.row - move.from.row) == 2) {
-        int midRow = (move.to.row + move.from.row) / 2;
+        int midRow = (movingPiece.color == Color::White) ? move.from.row -1 : move.from.row +1;
         setEnPassantTarget({ midRow, move.from.col });
     }else{
         clearEnPassantTarget();

@@ -41,7 +41,8 @@ switch (moveType)
         return targetsquare.type == Piecetype::None; //gets destinationsquare, and checks for empty. returns true if true
     
     case MoveType::ForwardTwo: {
-        return  !piece.hasMoved &&
+        int startrow = (piece.color == Color::White) ? 1 : 6;
+        return  (move.from.row == startrow) &&
                 Rules::pathIsClear(board, move) &&
                 targetsquare.type == Piecetype::None; //checks if pawn has moved AND if path is clear AND if destination square is empty
     }

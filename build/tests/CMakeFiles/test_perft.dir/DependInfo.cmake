@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/madss/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/tests/test_perft.cpp" "tests/CMakeFiles/test_perft.dir/test_perft.cpp.obj" "gcc" "tests/CMakeFiles/test_perft.dir/test_perft.cpp.obj.d"
+  "C:/Users/Mads/OneDrive - Aarhus universitet/Dokumenter/Synced VSC folder/projects/skakspil/tests/test_perft.cpp" "tests/CMakeFiles/test_perft.dir/test_perft.cpp.obj" "gcc" "tests/CMakeFiles/test_perft.dir/test_perft.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

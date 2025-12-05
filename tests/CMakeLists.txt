@@ -33,3 +33,14 @@ target_link_libraries(fen_test PRIVATE skakspil_lib)
 
 add_test(NAME FenTest COMMAND fen_test)
 
+
+#---- Load position test--------------------------------------------------------
+add_executable(load_pos_test load_pos_test.cpp)
+
+target_include_directories(load_pos_test PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/include
+)
+target_link_libraries(load_pos_test PRIVATE skakspil_lib)
+
+add_test(NAME LoadPositionTest COMMAND load_pos_test)
+
