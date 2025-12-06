@@ -10,4 +10,5 @@ namespace Testing {
     void runPerftSuite(Game& game, int maxDepth);
 
     void perftDivide(Game& game, int depth); //debugging
+    bool isPromotionMove(const Game& game, const Move& m);
 }
