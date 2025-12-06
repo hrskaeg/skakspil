@@ -142,15 +142,39 @@ return true;//No legal moves to avoid checkmate
 }
 //When called, handles pawn promotion if applicable
 MoveStatus Game::validatePromotion(const Move& move, Piecetype promotionType){
-Piece& p = board.getPiece(move.to.row,move.to.col);
-if (promotionType == Piecetype::None){return MoveStatus::nullPromotion;} //no promotiontype given
-if (p.type == Piecetype::Pawn){
-    if((p.color == Color::White && move.to.row == 7) ||
-        (p.color == Color::Black && move.to.row == 0)){
+    const Piece& p = board.getPiece(move.from.row, move.from.col);
+
+    // Is this move even a promotion candidate?
+    bool isPromotionSquare =
+        p.type == Piecetype::Pawn &&
+        ((p.color == Color::White && move.to.row == 7) ||
+         (p.color == Color::Black && move.to.row == 0));
+
+    // --- Case 1: This is NOT a promotion move ---
+    if (!isPromotionSquare) {
+        // Normal move: must NOT specify a promotion piece
+        if (promotionType == Piecetype::None)
+            return MoveStatus::Success;      // fine, just a regular move
+        else
+            return MoveStatus::IllegalMove;  // can't promote here
+    }
+
+    // --- Case 2: This IS a promotion move (pawn reaching last rank) ---
+
+    // No promotion type specified -> caller must ask (UI/perft/etc.)
+    if (promotionType == Piecetype::None)
+        return MoveStatus::nullPromotion;
+
+    // Only allow Q/R/B/N as promotion pieces
+    switch (promotionType) {
+        case Piecetype::Queen:
+        case Piecetype::Rook:
+        case Piecetype::Bishop:
+        case Piecetype::Knight:
             return MoveStatus::Success;
-        }
-}
-return MoveStatus::IllegalMove;
+        default:
+            return MoveStatus::IllegalMove;
+    }
 }
 
 
