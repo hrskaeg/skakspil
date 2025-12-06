@@ -8,11 +8,11 @@ const Piece& piece = board.getPiece(move.from.row, move.from.col);
 
 
 //Validations
+if (validatePromotion(move, promotionType) != MoveStatus::Success){return validatePromotion(move, promotionType);}
 if (piece.color != getTurn()){return MoveStatus::NotYourTurn;}
 if (!Rules::isValidMove(board,move)){return MoveStatus::IllegalMove;}
 if (piece.type == Piecetype::None){return MoveStatus::MovingEmpty;}
 if (!Rules::isKingSafePostMove(board,move)){return MoveStatus::KingThreatened;}
-if (validatePromotion(move,promotionType) == MoveStatus::nullPromotion){return MoveStatus::nullPromotion;}
 
 //Logs move in history
 moveHistory.push_back({
@@ -25,18 +25,16 @@ moveHistory.push_back({
 
 //Performs move
 board.executeMove(move, promotionType);
-    
-
  
 //Check for 'checkmate' or 'stalemate'
 if (inCheckmate((getTurn() == Color::White) ? Color::Black : Color::White)){
-    return MoveStatus::CheckMate;}
-if (inStalemate((getTurn() == Color::White) ? Color::Black : Color::White)){
-    return MoveStatus::StaleMate;}
+    return MoveStatus::CheckMate;
+}else if (inStalemate((getTurn() == Color::White) ? Color::Black : Color::White)){
+    return MoveStatus::StaleMate;
+}
 
 switchTurn();
 return MoveStatus::Success;
-
 }
 
 Game::Game()
