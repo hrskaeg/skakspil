@@ -133,7 +133,7 @@ void Board::executeMove(const Move& move, Piecetype promotionType){
     //checks for castling, and handles rook movement if true
     if (movingPiece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
     handleCastling(move);
-    }   
+    }
         //check for en passant
     if  (movingPiece.type == Piecetype::Pawn &&
         abs(move.to.col - move.from.col) == 1 &&
