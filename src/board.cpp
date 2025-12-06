@@ -128,7 +128,7 @@ void Board::executeMove(const Move& move, Piecetype promotionType){
                 break;
         }
     }else {
-    Piece movingPiece = squares[move.from.row][move.from.col];}  //Copy piece being moved
+     movingPiece = squares[move.from.row][move.from.col];}  //Copy piece being moved
 
     //checks for castling, and handles rook movement if true
     if (movingPiece.type == Piecetype::King && abs(move.to.col - move.from.col) == 2){ //special case castling
